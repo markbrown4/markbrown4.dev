@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  variant?: 'default' | 'paper';
+}
+
+const DEFAULT_TITLE = 'Mark Brown, Software Engineer';
+const DEFAULT_DESCRIPTION = 'Mark Brown is a software engineer in Melbourne, Australia, building web and native apps.';
+
+const { title, description = DEFAULT_DESCRIPTION, variant = 'default' } = Astro.props;
+const fullTitle = title ? `${title} · Mark Brown` : DEFAULT_TITLE;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: '/', label: 'About', active: path === '/' },
+  { href: '/journal/', label: 'Journal', active: path.startsWith('/journal') },
+  { href: '/sharing/', label: 'Sharing', active: path.startsWith('/sharing') },
+  { href: '/cv/', label: 'CV', active: path.startsWith('/cv') },
+];
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/me.jpg', Astro.site)} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="alternate" type="application/atom+xml" title="Journal" href="/journal/feed.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href="/fonts/calluna-webfont.woff" as="font" type="font/woff" crossorigin />
+    <slot name="head" />
+  </head>
+  <body class={variant}>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a href="/" class="logo" aria-label="Home">
+        {variant === 'paper'
+          ? <img src="/images/me.jpg" alt="" width="96" height="96" class="face" />
+          : <img src="/images/boot.png" alt="" width="35" height="50" />}
+      </a>
+      <p class="site-name">Mark Brown</p>
+      <nav aria-label="Main">
+        <ul>
+          {nav.map((item) => (
+            <li><a href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="sheet">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <a href="mailto:markbrown4@gmail.com">markbrown4@gmail.com</a>
+      <a href="https://github.com/markbrown4">GitHub</a>
+      <a href="/journal/feed.xml">Feed</a>
+    </footer>
+  </body>
+</html>

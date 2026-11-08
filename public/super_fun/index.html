@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]--> <!-- manifest="super.manifest" -->
+<head>
+<meta charset="utf-8">
+<title>TWUSUPER - The Super Game of Life</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" href="img/title.png">
+<link rel="stylesheet" href="css/application.css">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=9">
+<!--[if IE ]>
+<link rel="stylesheet" href="css/ie.css">
+<script src="js/excanvas.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="overlay"></div>
+<div id="outer">
+	<div id="container">
+		<div id="inner">
+			<div id="ie-canvas"></div>
+			<canvas id="canvas" width="1022" height="760"></canvas>
+			<div id="paper"></div>
+			<div id="age">55</div>
+			<div id="balance">$0</div>
+			
+			<div id="intro" class="active">
+				<img class="title" src="img/title.png">
+				<!--[if lt IE 9 ]>
+				<div id="browsers">
+					<div class="aside">
+						<h2>We noticed you are using <br>an older version of Internet Explorer</h2>
+						<p>For optimal performance we recommend <br>using one of the following browsers:</p>
+					</div>
+					<ul>
+						<li><a href="https://www.google.com/chrome" target="_blank"><img src="img/chrome.png">Chrome</a></li>
+						<li><a href="http://www.mozilla.org/en-US/firefox/fx/" target="_blank"><img src="img/firefox.png">Firefox</a></li>
+						<li><a href="http://www.apple.com/safari/" target="_blank"><img src="img/safari.png">Safari</a></li>
+						<li><a href="http://windows.microsoft.com/en-AU/internet-explorer/products/ie/home" target="_blank"><img src="img/ie.png">IE 9.0</a></li>
+					</ul>
+				</div>
+				<p><a href="#" class="btn" id="ie-start">No thanks, show me the game</a></p>
+				<![endif]-->
+				<!--[if gte IE 9 ]>
+					<div class="loading">
+						<img id="loading-spinner" src="img/loading-spinner.png">
+						<img class="loading" src="img/loading.png">
+					</div>
+				<![endif]-->
+				<!--[if (!IE)]> -->
+				<div class="loading">
+					<img id="loading-spinner" src="img/loading-spinner.png">
+					<img class="loading" src="img/loading.png">
+				</div>
+				<!-- <![endif]-->
+				<div class="footer">
+					<img class="logo" src="img/logo.png">
+					<p>General advice on this website has been prepared without taking into account your objectives, financial situation or needs. Before acting on this advice you should determine if it is appropriate for you. Before acquiring a product, first read the relevant product disclosure statement. © TWU Nominees Pty Ltd (ABN 67 002 835 412) | <a href="http://www.twusuper.com.au/Contact-Us.aspx">Contact Us</a> | <a href="http://www.twusuper.com.au/">TWUSUPER home</a></p> 
+				</div>
+			</div>
+			
+			<div id="choose" class="card">
+				<h2>What’s your plan for retirement?</h2>
+				<p>To Play the Super Game of Life, choose the retirement<br>you would enjoy the most!</p>
+				<ul class="answers">
+					<li><a href="#" id="adventurer">
+						<img src="img/car-adventurer-small.png">
+						<h3>Early Adventurer</h3>
+						<p>Escaping the rat race early and taking the family on a nice long road trip is your idea of retirement.</p>
+					</a></li>
+					<li><a href="#" id="sitter">
+						<img src="img/car-sitter-small.png">
+						<h3>Super Sitter</h3>
+						<p>You’re happy to declare at the standard age and spend quality time with the grand kids.</p>
+					</a></li>
+					<li><a href="#" id="work-horse">
+						<img src="img/car-work-horse-small.png">
+						<h3>Work Horse</h3>
+						<p>It’s not how old you are; it’s how young you feel! You’re in it for the long haul as you can’t see yourself in a rocking chair just yet.</p>
+					</a></li>
+				</ul>
+			</div>
+			
+			<div id="instructions" class="card active" style="display: none">
+				<h2>Instructions</h2>
+				<img class="car" src="img/car-sitter.png">
+				<h3 class="car-type"></h3>
+				<hr>
+				<p>Your start age is <em class="age"></em><br>
+				The game ends when you turn <em class="end-age"></em><br>
+				Your starting super is <em class="start-balance"></em></p>
+				<hr>
+				<p><small>Each time you pass start is TWO years. You have 10 years to negotiate anything life throws at you to ensure you have a comortable retirement.  The Game ends at the end of the 10 years or until you have answered all questions correctly.</small></p>
+				<p><a href="#" class="btn" id="start">Start the game!</a></p>
+			</div>
+			
+			<div id="spinner">
+				<div id="number"></div>
+				<h2>Your Move</h2>
+				<div class="wheel">
+					<div id="wheel"></div>
+					<div class="marker"></div>
+				</div>
+				<p>Drag the wheel to spin</p>
+			</div>
+			
+			<div id="incorrect" class="active" style="display: none">
+				<h2><span class="topic"></span></h2>
+				<p class="icon"><img src="img/cross.png"></p>
+				<p class="msg"></p>
+				<div class="reward-area">
+					<hr>
+				</div>
+				<p class="tip"><strong>TIP:</strong> <small class="tip-text"></small></p>
+				<a href="#" class="btn spin-again">Spin again!</a>
+			</div>
+
+			<div id="correct" class="active" style="display: none">
+				<h2><span class="topic"></span></h2>
+				<p class="icon"><img src="img/tick.png"></p>
+				<p class="msg"></p>
+				<div class="reward-area">
+					<small>You gain an extra:</small>
+					<span class="reward"></span>
+					<hr>
+				</div>
+				<p class="tip"><strong>TIP:</strong>  <small class="tip-text"></small></p>
+				<a href="#" class="btn spin-again">Spin again!</a>
+			</div>
+			
+			<div id="questions"></div>
+			
+			<div id="final">
+				<h2>Congratulations</h2>
+				<p id="finished">You finished the game with:</p>
+				<p id="score"></p>
+				<p>Giving you a retirement lifestyle of:</p>
+				<h3 id="lifestyle"></h3>
+				<p id="story"></p>
+				<hr>
+				<div id="learn">
+					<p>Learn more about some of the<br> choices you made</p>
+					<ul id="choices"></ul>
+				</div>
+				<p>
+					<a href="index.html" id="reset" class="btn">Play again!</a>
+					<a href="form.html" target="_blank" id="more-advice" class="btn">Need more super advice?</a>
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- <script src="src/jquery.js"></script>
+<script src="src/raphael.js"></script>
+<script src="src/ios-orientation-change-fix.js"></script>
+<script src="src/Util.js"></script>
+<script src="src/data.js"></script>
+<script src="src/scripts.js"></script> -->
+<script src="js/application.js"></script>
+</body>
+</html>

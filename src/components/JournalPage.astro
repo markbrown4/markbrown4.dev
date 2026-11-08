@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import JournalSidebar from './JournalSidebar.astro';
+import PostSummary from './PostSummary.astro';
+import { PAGE_SIZE, getPosts, journalPageUrl } from '../lib/journal';
+
+interface Props {
+  page: number;
+}
+
+const { page } = Astro.props;
+const posts = await getPosts();
+const lastPage = Math.ceil(posts.length / PAGE_SIZE);
+const pagePosts = posts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+---
+
+<Base title={page === 1 ? 'Journal' : `Journal, page ${page}`} description="Writing on work, life and the web.">
+  <div class="journal">
+    <div class="journal-main">
+      <h1 class="visually-hidden">Journal</h1>
+      {pagePosts.map((post) => <PostSummary post={post} />)}
+      <nav class="pagination" aria-label="Pages">
+        {page > 1 && <a href={journalPageUrl(page - 1)} class="prev">← Newer</a>}
+        {page < lastPage && <a href={journalPageUrl(page + 1)} class="next">Older →</a>}
+      </nav>
+    </div>
+    <JournalSidebar />
+  </div>
+</Base>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TWUSUPER - The Super Game of Life</title>
+<link rel="stylesheet" href="css/application.css">
+<!--[if IE ]>
+<link rel="stylesheet" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div id="outer">
+	<div id="container">
+		<div id="inner">
+			
+			<div id="form" class="active">
+				<div id="msg"></div>
+				<div id="thanks">
+					<img class="logo" src="img/logo-large.png">
+					<p>Thanks for registering your interest.<br>
+						A TWUSUPER representative will contact you shortly.</p>
+					<a href="index.html" class="btn">Play Again!</a>
+				</div>
+				<div id="content">
+					
+					<img class="logo" src="img/form-logo.png">
+					<img class="verisign" src="img/verisign.png">
+					<p id="plan">To plan your own comfortable retirement, contact us for any additional information you would like.</p>
+					<form id="form-form" method="post" action="form.html">
+						<div class="select-all">
+							<label class="label">Select all that apply:</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="salary-sacrifice">Salary Sacrifice</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="extra-contributions">Making extra contributions</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="retirement-planning">Retirement Planning</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="enquiry">General Enquiry</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="transition">Transition to retirement pensions</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="insurance">Insurance</label>
+							<label><span class="fake-check"></span><input class="check" type="checkbox" value="checked" name="financial-planning">Financial Planning</label>
+						</div>
+						<div class="personal">
+							<input class="text" type="text" name="name" placeholder="Full Name">
+							<input class="text" type="email" name="email" placeholder="Email Address">
+							<input class="text" type="tel" name="number" placeholder="Contact Number">
+							<input class="text" type="text" name="member-number" placeholder="Member Number (optional)">
+							<input class="text" type="text" name="address" placeholder="Postal Address">
+							<input class="text" type="text" name="suburb" placeholder="Suburb">
+							<input class="postcode text" type="text" name="postcode" placeholder="Postcode">
+							<div id="fake-select">
+								<a href="#" class="trigger">State</a>
+								<ul>
+									<li><a href="#">VIC</a></li>
+									<li><a href="#">QLD</a></li>
+									<li><a href="#">NSW</a></li>
+									<li><a href="#">WA</a></li>
+									<li><a href="#">NT</a></li>
+									<li><a href="#">SA</a></li>
+									<li><a href="#">TAS</a></li>
+								</ul>
+								<input name="state" type="hidden" value="">
+							</div>
+						</div>
+						<hr>
+						<label class="label" for="comments">Other Comments:</label>
+						<div class="textarea-wrap">
+							<textarea id="comments" name="comments"></textarea>
+						</div>
+						<hr>
+						<label>
+							<span class="fake-check"></span>
+							<input class="check" type="checkbox" name="enjoyed-game" value="checked">Did you enjoy the Super Game of Life? Y/N
+						</label>
+						<label>
+							<span class="fake-check"></span>
+							<input class="check" type="checkbox" name="receive-news" value="checked">Yes, I would like to receive news and product information from TWUSUPER
+						</label>
+						<hr>
+						<p><a id="submit" href="#" class="btn">Submit</a> <small>or</small> <a href="index.html" id="cancel-form" class="cancel">Cancel</a></p>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- <script src="src/jquery.js"></script>
+<script src="js/jquery.placeholder.min.js"></script>
+<script src="src/ios-orientation-change-fix.js"></script>
+<script src="src/form-scripts.js"></script> -->
+<script src="js/form.js"></script>
+</body>
+</html>

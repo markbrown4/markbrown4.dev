@@ -1,0 +1,17 @@
+---
+import { formatDate, postUrl, splitPost, type Post } from '../lib/journal';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { intro } = splitPost(post);
+---
+
+<article class="summary">
+  <h2><a href={postUrl(post)}>{post.data.title}</a></h2>
+  <p class="meta"><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></p>
+  <div class="prose" set:html={intro} />
+  <p><a href={postUrl(post)} aria-label={`Read more of ${post.data.title}`}>Read more…</a></p>
+</article>

@@ -1,0 +1,661 @@
+@import "_common.scss";
+
+@import "compass/css3";
+@import "compass/reset";
+@import "fonts";
+@import "layout";
+
+body {
+	background: #333; /* loading */
+	color: $grey;
+}
+a {
+	color: #9cc5c9;
+	text-decoration: none;
+}
+small { font-size: 13px }
+p { line-height: 1.5 }
+h1,h2,h3 {
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+	letter-spacing: 1.5px;
+}
+p { margin: 0 0 1em }
+h2 {
+	font-size: 20px;
+	color: $red;
+	line-height: 5px;
+}
+h2:before {
+	content: '—';
+	margin-right: 5px;
+	font-size: 35px;
+}
+h2:after {
+	content: '—';
+	margin-left: 10px;
+	font-size: 35px;
+}
+em { color: $blue; font-size: 120% }
+h3 { color: $blue }
+.btn {
+	background: $red url(../img/button-texture.png);
+	display: block;
+	width: 285px;
+	padding: 12px 0;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	line-height: 1;
+	text-shadow: 0 2px rgba(0,0,0,.3);
+	box-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+body {
+	font-family: 'MontserratRegular', sans-serif;
+	background: url(../img/texture.jpg);
+}
+#inner {
+	background: transparent url(../img/board.jpg) repeat -1px -1px;
+	box-shadow: 0 0 50px rgba(0,0,0,.3);
+}
+hr {
+	display: block;
+	width: 100px;
+	height: 0;
+	overflow: hidden;
+	border: none;
+	border-top: 3px solid $blue;
+	margin: 10px auto;
+}
+/* board z-index 1 */
+#age {
+	position: absolute;
+	bottom: 130px;
+	font-size: 80px;
+	left: 49px;
+	width: 193px;
+	color: $red;
+	text-shadow: 0 1px rgba(0,0,0,.4)
+}
+#balance {
+	position: absolute;
+	bottom: 54px;
+	font-size: 35px;
+	left: 49px;
+	width: 193px;
+	color: #fff;
+	text-shadow: 0 2px rgba(0,0,0,.3);
+}
+
+/* z-index 2 */
+#overlay {
+	background: rgba(0,0,0,.4);
+	position: fixed;
+	z-index: 3;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	@include transition(opacity .3s linear);
+	&.active {
+		opacity: 1;
+	}
+}
+
+#paper, #canvas, #ie-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#canvas, #ie-canvas {
+	z-index: 2;
+}
+
+/* cards z-index 3 */
+#spinner, .card, #questions > div, #incorrect, #correct, #final {
+	@include transition(all .5s ease-in);
+	position: absolute;
+	z-index: 3;
+	top: -700px;
+	opacity: 0;
+	left: 140px;
+	width: 680px;
+	background: #fff url(../img/texture.jpg);
+	padding: 50px 31px 15px;
+	min-height: 490px;
+	&.active {
+		top: 115px;
+		opacity: 1;
+	}
+	&:before {
+		content: '';
+		height: 11px;
+		position: absolute;
+		top: -11px;
+		left: 0;
+		right: 0;
+		background: url(../img/ribbon-top.png);
+	}
+	&:after {
+		content: '';
+		height: 11px;
+		position: absolute;
+		bottom: -11px;
+		left: 0;
+		right: 0;
+		background: url(../img/ribbon-bottom.png);
+	}
+}
+#spinner {
+	width: 300px;
+	min-height: 343px;
+	left: 340px;
+	padding: 15px 19px;
+	box-shadow: 0 0 40px rgba(0,0,0,.6);
+	&.active {
+		top: 190px;
+	}
+	&.show-number {
+		#number {
+			opacity: 0;
+			font-size: 200px;
+			text-shadow: 0 0 30px rgba(0,0,0,.8);
+		}
+	}
+	#number {
+		@include transition(all .7s ease-out);
+		opacity: 1;
+		color: #fff;
+		font-size: 0px;
+		left: 0;
+		line-height: 100px;
+		position: absolute;
+		right: 0;
+		text-shadow: 0 0 5px rgba(0,0,0,.2);
+		top: 56px;
+		z-index: 5;
+	}
+	.wheel {
+		background: url(../img/spinner-bg.png);
+		height: 290px;
+		width: 275px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.marker {
+		background: url(../img/spin-marker.png);
+		height: 157px;
+		width: 140px;
+		position: absolute;
+		top: 18px;
+		left: 69px;
+	}
+	#wheel {
+		background: url(../img/spinner.png);
+		height: 230px;
+		width: 230px;
+		position: absolute;
+		top: 23px;
+		left: 23px;
+		@include transition(all 1.5s ease-out);
+		@for $i from 1 through 6 {
+			$rotation: 360deg*3 + $i*60;
+			&.spin-#{$i} {
+				@include transform(rotate($rotation));
+			}
+			&.reverse.spin-#{$i} {
+				@include transform(rotate(0-$rotation));
+			}
+		}
+	}
+}
+
+#intro, #form {
+	@include transition(all 1s ease-in);
+	height: $height;
+	width: $width;
+	background: #fff url(../img/texture.jpg);
+	margin: -1px;
+	position: absolute;
+	left: 0;
+	z-index: 99;
+	top: -800px;
+	opacity: 0;
+	&.active {
+		top: 0;
+		opacity: 1;
+	}
+	.title { margin-top: 150px }
+	.loading {
+		background: transparent url(../img/loading-spinner-bg.png) no-repeat 491px 3px;
+		#loading-spinner {
+			display: block;
+			width: 48px;
+			height: 47px;
+			margin: 56px auto 12px;
+			@include transition(all 5s linear);
+			&.spin {
+				@include transform(rotate(360deg*5));
+			}
+		}
+	}
+	.footer {
+		.logo {
+			position: absolute;
+			bottom: 40px;
+			left: 40px;
+		}
+		p { 
+			color: #aaa;
+			font-size: 11px;
+			bottom: 35px;
+			left: 220px;
+			margin: 0;
+			position: absolute;
+			text-align: left;
+			width: 750px;
+		}
+		a { color: $red }
+	}
+}
+
+#choose {
+	z-index: 4;
+	.answers {
+		list-style: none;
+		h3 {
+			margin-left: 130px;
+			margin-bottom: 7px;
+		}
+		p {
+			margin: 0 0 0 130px;
+		}
+		img {
+			float: left;
+			position: relative;
+			bottom: -5px;
+		}
+		#sitter img { bottom: -10px }
+	}
+}
+#instructions {
+	img { margin: 15px 0 20px }
+	small {
+		font-size: 14px;
+		display: block;
+		margin: 20px 35px;
+	}
+}
+
+#questions {
+	> div {
+		padding-top: 20px;
+		min-height: 510px;
+	}
+	.answers a {
+		font-size: 14px;
+		line-height: 1.5;
+		color: $red;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 15px 30px;
+		&:active, &:focus {
+			border-color: $red;
+			background: $red;
+			color: #fff;
+			text-shadow: 0 2px rgba(0,0,0,.3);
+			outline: none;
+		}
+	}
+	p { margin-bottom: 20px }
+}
+#questions h2 span,
+#correct h2 span,
+#incorrect h2 span {
+	display: inline-block;
+	height: 58px;
+	line-height: 58px;
+	width: 58px;
+	background: $red;
+	color: #fff;
+	border-radius: 58px;
+	font-size: 35px;
+	text-align: center;
+	text-indent: 3px;
+}
+#correct, #incorrect {
+	padding-top: 20px;
+	min-height: 510px;
+	.icon {
+		position: absolute;
+		left: 341px;
+		top: 110px;
+		margin: 0;
+	}
+	.msg {
+		margin-top: 90px;
+		color: $green;
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+	.reward-area {
+		position: relative;
+		height: 100px;
+		small {
+			display: block;
+			margin-bottom: 70px;
+		}
+	}
+	.reward {
+		position: absolute;
+		top: 18px;
+		left: 0;
+		right: 0;
+		font-size: 55px;
+		color: $green;
+		text-shadow: 0 1px rgba(0,0,0,.4);
+	}
+	.tip small {
+		font-size: 15px;
+		line-height: 18px;
+	}
+	hr { border-color: $green }
+}
+#incorrect {
+	.msg {
+		color: $red;
+	}
+	hr { border-color: $red }
+}
+.answers {
+	text-align: left;
+	p { font-size: 13px }
+	a {
+		color: $grey;
+		display: block;
+		padding: 20px 30px;
+		background: #eee;
+		background: rgba(0,0,0,.04);
+		border: 4px solid transparent;
+		border-radius: 10px;
+		margin-bottom: 14px;
+		&:hover {
+		  background: #e8e8e8;
+			background: rgba(0,0,0,.08);
+		}
+		&:active, &:focus {
+			border-color: $red;
+			outline: none;
+		}
+	}
+	h3 { color: $blue }
+}
+
+#final {
+	.btn {
+		float: left;
+		margin-right: 10px;
+	}
+	#finished {
+		position: absolute;
+		top: 100px;
+		left: 30px;
+		width: 140px;
+		text-align: right;
+	}
+	#score {
+		width: 382px;
+		height: 76px;
+		margin: 30px auto 25px;
+		line-height: 76px;
+		color: #fff;
+		text-align: center;
+		font-size: 55px;
+		text-shadow: 0 2px rgba(0,0,0,.2);
+		background: url(../img/final-ribbon.png);
+	}
+	h3 {
+		font-size: 25px;
+		margin: 0 0 5px;
+	}
+	#story {
+		color: #c8c8c8;
+		font-style: italic;
+		padding: 0 20px;
+	}
+	hr {
+		border-top: 2px dashed $blue;
+		width: 100%
+	}
+	#learn {
+		margin: 20px 0;
+		overflow: hidden;
+		p {
+			float: left;
+			width: 275px;
+			text-align: right;
+			padding: 20px 25px 0 0;
+		}
+		ul {
+			float: left;
+			width: 320px;
+			height: 90px;
+			background: url(../img/handlebars.png) no-repeat 0 0;
+			padding: 5px 0 0 55px;
+			li {
+				overflow: hidden;
+				width: 100%;
+				padding-bottom: 7px;
+			}
+			a {
+				color: #fff;
+				text-shadow: 0 1px 1px rgba(0,0,0,.2);
+				text-transform: uppercase;
+				font-size: 14px;
+				float: left;
+				height: 23px;
+				line-height: 22px;
+				padding: 0 15px 0 5px;
+				background: url(../img/ribbon-green.png) no-repeat 100% 0;
+			}
+			#l-2 a {
+				background-image: url(../img/ribbon-grey.png);
+			}
+			#l-3 a {
+				background-image: url(../img/ribbon-yellow.png);
+			}
+		}
+	}
+	#reset {
+		width: 220px;
+		margin-left: 25px;
+	}
+	#more-advice { width: 400px }
+}
+
+#form {
+	#thanks {
+		display: none;
+		position: absolute;
+		top: 225px;
+		left: 0;
+		right: 0;
+		.logo {
+			margin: 0;
+		}
+		p {
+			margin: 40px 0;
+			color: #A2978A;
+		}
+	}
+	#plan {
+		position: absolute;
+		top: 200px;
+		left: 50px;
+		width: 200px;
+		text-align: center;
+	}
+	label {
+		display: block;
+		overflow: hidden;
+		color: #a2978a;
+		margin-bottom: 9px;
+		line-height: 27px;
+		padding-left: 38px;
+		cursor: pointer;
+	}
+	.label {
+		color: #666768;
+		padding: 0;
+		cursor: normal;
+	}
+	.check { display: none }
+	.fake-check {
+		float: left;
+		margin-left: -38px;
+		height: 27px;
+		width: 27px;
+		background: url(../img/check.png) no-repeat 0 0;
+	}
+	.active {
+		color: $red;
+		.fake-check {
+			background-position: 0 -27px;
+		}
+	}
+	.text, textarea, #fake-select {
+		border: none;
+		border-top: 1px solid #ccc;
+		border-top: 1px solid rgba(0,0,0,.15);
+		border-left: 1px solid #ccc;
+		border-left: 1px solid rgba(0,0,0,.15);
+		background: url(../img/form-texture.png) repeat;
+		box-shadow: inset 1px 1px 2px rgba(0,0,0,.1);
+		padding: 7px 10px;
+		margin-bottom: 9px;
+		color: #666768;
+		font-size: 15px;
+		font-family: 'MontserratRegular', sans-serif;
+	}
+	::-webkit-input-placeholder { color: #666768 }
+	:-moz-placeholder { color: #666768 }
+	#fake-select {
+		padding: 0;
+		width: 169px;
+		position: relative;
+		.trigger {
+			display: block;
+			color: #666768;
+			width: 150px;
+			padding: 9px 10px 10px;
+			background: url(../img/toggle-arrow.png) no-repeat 100% 4px;
+		}
+		ul {
+			background: url(../img/form-texture.png) repeat;
+			border-top: 1px solid #ccc;
+			border-top: 1px solid rgba(0,0,0,.15);
+			border-left: 1px solid #ccc;
+			border-left: 1px solid rgba(0,0,0,.15);
+			left: -1px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			display: none;
+			padding: 3px 0;
+			a {
+				display: block;
+				padding: 5px 10px;
+				color: #666768;
+				&:hover {
+					background: rgba(0,0,0,.05)
+				}
+			}
+		}
+		&.active ul { display: block }
+	}
+	.text { width: 269px }
+	textarea { width: 618px }
+	.postcode { width: 90px; float: right }
+	.btn {
+		display: inline-block;
+		margin-right: 10px;
+		border: none;
+		width: 225px;
+		text-align: center;
+	}
+	form {
+		width: 640px;
+		float: right;
+		margin: 65px;
+		text-align: left;
+	}
+	.select-all {
+		float: left;
+		width: 350px;
+	}
+	.personal {
+		float: left;
+		width: 290px;
+	}
+	hr {
+		border-top: 2px dashed $red;
+		width: 100%;
+		margin: 20px 0;
+	}
+	#content {
+		position: relative;
+		@include transition(opacity .5s linear);
+		opacity: 1;
+		z-index: 2;
+	}
+	#msg {
+		background: #f6c1a9;
+		@include transition(all .5s linear);
+		border-radius: 10px 10px 10px 10px;
+		left: 20px;
+		padding: 30px;
+		position: absolute;
+		right: 20px;
+		top: 640px;
+		opacity: 0;
+	}
+}
+#content .logo {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.verisign {
+	position: absolute;
+	top: 620px;
+	left: 100px;
+}
+#form.nope {
+	#msg {
+		opacity: 1;
+		z-index: 5;
+	}
+	#content {
+		opacity: .2;
+	}
+}
+#form.yep {
+	#thanks { display: block }
+	#content { display: none }
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.no-transition {
+	@include transition(none !important);
+}
+
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}

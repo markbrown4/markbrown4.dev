@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import JournalPage from '../../../components/JournalPage.astro';
+import { PAGE_SIZE, getPosts } from '../../../lib/journal';
+
+export const getStaticPaths = (async () => {
+  const lastPage = Math.ceil((await getPosts()).length / PAGE_SIZE);
+  return Array.from({ length: lastPage - 1 }, (_, i) => ({ params: { page: String(i + 2) } }));
+}) satisfies GetStaticPaths;
+
+const page = Number(Astro.params.page);
+---
+
+<JournalPage page={page} />

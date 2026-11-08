@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import places from '../data/places.json';
+---
+
+<Base title="Travel" description="Places Mark Brown has travelled.">
+  <link slot="head" rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <h1 class="visually-hidden">Travel</h1>
+  <div id="map" class="frame map" data-places={JSON.stringify(places)}></div>
+  <noscript><p>The map needs JavaScript. I’ve been to {places.length} places so far.</p></noscript>
+  <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script is:inline>
+    const el = document.getElementById('map');
+    const europe = location.hash === '#europe';
+    const map = L.map(el, { scrollWheelZoom: false, worldCopyJump: true })
+      .setView(europe ? [54.5, 15] : [20, 48], europe ? 4 : 2);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    for (const p of JSON.parse(el.dataset.places)) {
+      L.circleMarker([p.lat, p.lng], { radius: 5, weight: 1, color: '#9a5b00', fillColor: '#f2b632', fillOpacity: 0.9 })
+        .bindTooltip(p.title)
+        .addTo(map);
+    }
+  </script>
+</Base>

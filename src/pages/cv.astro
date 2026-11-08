@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { compiledContent } from '../data/cv.md';
+import { yearsExperience } from '../lib/journal';
+
+const html = (await compiledContent()).replace('{{years}}', String(yearsExperience()));
+---
+
+<Base title="CV" description="The CV of Mark Brown, software engineer in Melbourne, Australia." variant="paper">
+  <p class="location">Melbourne, Australia</p>
+  <div class="prose cv" set:html={html} />
+</Base>

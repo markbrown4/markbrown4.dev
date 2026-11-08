@@ -1,0 +1,49 @@
+.ie7, .ie8 {
+	#overlay { display: none }
+	#msg { display: none }
+	.nope #msg { display: block }
+	#content { zoom: 1 }
+	#spinner, .card, #questions > div, #incorrect, #correct, #final {
+		border: 2px solid #ddd;
+		&:before { content: none; }
+		&:after { content: none; }
+	}
+	#browsers {
+		padding: 70px;
+		h2 {
+			text-transform: none;
+			line-height: 1.4;
+			font-size: 18px;
+			&:before { content: none }
+			&:after { content: none }
+		}
+		p { font-size: 14px }
+		.aside {
+			float: left;
+			text-align: right;
+			width: 315px;
+			padding-right: 40px;
+		}
+		ul {
+			overflow: hidden;
+			background: url(../img/large-handlebars.png) no-repeat 0 0;
+			padding: 5px 0 0 55px;
+			margin: 0;
+			list-style: none;
+		}
+		li { float: left; margin: 0; padding: 0 }
+		a {
+			float: left;
+			font-size: 11px;
+			padding: 0 20px;
+			text-align: center;
+			color: #666768;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		img { display: block; margin-bottom: 10px }
+	}
+	#intro .title { margin-top: 100px }
+	#intro .btn { width: 440px }
+	#ie-canvas { width: 1022px; height: 760px }
+}

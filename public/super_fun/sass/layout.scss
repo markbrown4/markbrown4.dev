@@ -1,0 +1,48 @@
+@import "_common.scss";
+
+/* mac hide \*/
+html,body{
+	height: 100%;
+	width: 100%;
+}
+/* end hide */
+body {
+	text-align: center;
+	min-height: $height;
+	min-width: $width;
+}
+@media all and (orientation:landscape) {
+
+}
+#outer {
+	height: 100%;
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+}
+#container {
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+	display: table-cell;
+	height: 768px;
+}
+#inner {
+	width: $width - 2;
+	height: $height - 2;
+	border: 1px solid rgba(0,0,0,.1);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.ie7 .ie8 {
+	#container { top: 50% }
+	#inner { top:-50% }
+}
+.ie7 {
+	#outer {
+	 overflow: hidden;
+	}
+}

@@ -1,0 +1,977 @@
+[
+  {
+    "title": "Melbourne",
+    "lat": -37.8131869,
+    "lng": 144.9629796
+  },
+  {
+    "title": "Mildura",
+    "lat": -34.2063006,
+    "lng": 142.1358321
+  },
+  {
+    "title": "Adelaide",
+    "lat": -34.9287264,
+    "lng": 138.5999453
+  },
+  {
+    "title": "Sydney",
+    "lat": -33.873651,
+    "lng": 151.2068896
+  },
+  {
+    "title": "Gold Coast",
+    "lat": -28.0410141,
+    "lng": 153.297505
+  },
+  {
+    "title": "Cairns",
+    "lat": -16.9233991,
+    "lng": 145.773851
+  },
+  {
+    "title": "Perth",
+    "lat": -31.9528536,
+    "lng": 115.8573389
+  },
+  {
+    "title": "Tasmania",
+    "lat": -41.6851318,
+    "lng": 145.9526516
+  },
+  {
+    "title": "Wellington",
+    "lat": -41.2864603,
+    "lng": 174.776236
+  },
+  {
+    "title": "Grahamstown",
+    "lat": -33.30566,
+    "lng": 26.52453
+  },
+  {
+    "title": "Singapore",
+    "lat": 1.352083,
+    "lng": 103.819836
+  },
+  {
+    "title": "Kuala Lumpur",
+    "lat": 3.139003,
+    "lng": 101.686855
+  },
+  {
+    "title": "Batu Caves",
+    "lat": 3.253582,
+    "lng": 101.6697622
+  },
+  {
+    "title": "Penang",
+    "lat": 5.2632341,
+    "lng": 100.4846227
+  },
+  {
+    "title": "Langkawi",
+    "lat": 6.3233,
+    "lng": 99.8547239
+  },
+  {
+    "title": "Bangkok",
+    "lat": 13.7234186,
+    "lng": 100.4762319
+  },
+  {
+    "title": "Saigon",
+    "lat": 10.8230989,
+    "lng": 106.6296638
+  },
+  {
+    "title": "Hanoi",
+    "lat": 21.0333333,
+    "lng": 105.85
+  },
+  {
+    "title": "Ha Long Bay",
+    "lat": 20.9711977,
+    "lng": 107.0448069
+  },
+  {
+    "title": "Shanghai",
+    "lat": 31.230393,
+    "lng": 121.473704
+  },
+  {
+    "title": "Hangzhou",
+    "lat": 30.274089,
+    "lng": 120.155069
+  },
+  {
+    "title": "Beijing",
+    "lat": 39.904214,
+    "lng": 116.407413
+  },
+  {
+    "title": "Chennai",
+    "lat": 13.052414,
+    "lng": 80.250825
+  },
+  {
+    "title": "Mahabalipuram",
+    "lat": 12.626927,
+    "lng": 80.192711
+  },
+  {
+    "title": "Pondicherry",
+    "lat": 11.932734,
+    "lng": 79.829922
+  },
+  {
+    "title": "Tanjore",
+    "lat": 10.786999,
+    "lng": 79.137827
+  },
+  {
+    "title": "Madurai",
+    "lat": 9.925201,
+    "lng": 78.119775
+  },
+  {
+    "title": "Kodaikanal",
+    "lat": 10.238114,
+    "lng": 77.489182
+  },
+  {
+    "title": "Kanyakumari",
+    "lat": 8.088306,
+    "lng": 77.538451
+  },
+  {
+    "title": "Kovalam",
+    "lat": 8.400923,
+    "lng": 76.97883
+  },
+  {
+    "title": "Kollam",
+    "lat": 8.88,
+    "lng": 76.6
+  },
+  {
+    "title": "Allepey",
+    "lat": 9.498067,
+    "lng": 76.338848
+  },
+  {
+    "title": "Kochi",
+    "lat": 9.931233,
+    "lng": 76.267304
+  },
+  {
+    "title": "Mysore",
+    "lat": 12.29581,
+    "lng": 76.639381
+  },
+  {
+    "title": "Bangalore",
+    "lat": 12.971599,
+    "lng": 77.594563
+  },
+  {
+    "title": "Hampi",
+    "lat": 15.333333,
+    "lng": 76.466667
+  },
+  {
+    "title": "Goa",
+    "lat": 15.299326,
+    "lng": 74.123996
+  },
+  {
+    "title": "Mumbai",
+    "lat": 19.075984,
+    "lng": 72.877656
+  },
+  {
+    "title": "Nashik",
+    "lat": 19.997453,
+    "lng": 73.789802
+  },
+  {
+    "title": "Ellora",
+    "lat": 20.023825,
+    "lng": 75.161834
+  },
+  {
+    "title": "Hyderabad",
+    "lat": 17.385044,
+    "lng": 78.486671
+  },
+  {
+    "title": "Ahmedabad",
+    "lat": 23.039568,
+    "lng": 72.566004
+  },
+  {
+    "title": "Jodhpur",
+    "lat": 26.238947,
+    "lng": 73.024309
+  },
+  {
+    "title": "Jaisalmer",
+    "lat": 26.915749,
+    "lng": 70.908344
+  },
+  {
+    "title": "Bikaner",
+    "lat": 28.01989,
+    "lng": 73.317551
+  },
+  {
+    "title": "Amritsar",
+    "lat": 31.633979,
+    "lng": 74.872264
+  },
+  {
+    "title": "Chandigarh",
+    "lat": 30.733315,
+    "lng": 76.779418
+  },
+  {
+    "title": "Rishikesh",
+    "lat": 30.086928,
+    "lng": 78.267612
+  },
+  {
+    "title": "Delhi",
+    "lat": 28.635308,
+    "lng": 77.22496
+  },
+  {
+    "title": "Udaipur",
+    "lat": 24.57127,
+    "lng": 73.691544
+  },
+  {
+    "title": "Pushkar",
+    "lat": 26.489749,
+    "lng": 74.551086
+  },
+  {
+    "title": "Jaipur",
+    "lat": 26.912416,
+    "lng": 75.787288
+  },
+  {
+    "title": "Agra",
+    "lat": 27.17667,
+    "lng": 78.008075
+  },
+  {
+    "title": "Khajuraho",
+    "lat": 24.831845,
+    "lng": 79.919855
+  },
+  {
+    "title": "Varanasi",
+    "lat": 25.317645,
+    "lng": 82.973914
+  },
+  {
+    "title": "Kathmandu",
+    "lat": 27.7,
+    "lng": 85.333333
+  },
+  {
+    "title": "Pokhara",
+    "lat": 28.202565,
+    "lng": 83.985008
+  },
+  {
+    "title": "Silay City",
+    "lat": 10.799542,
+    "lng": 122.973287
+  },
+  {
+    "title": "Apo Island",
+    "lat": 9.079721,
+    "lng": 123.271429
+  },
+  {
+    "title": "Bohol",
+    "lat": 9.849991,
+    "lng": 124.143543
+  },
+  {
+    "title": "Lagazbi",
+    "lat": 13.139062,
+    "lng": 123.7438
+  },
+  {
+    "title": "Cebu",
+    "lat": 10.315699,
+    "lng": 123.885437
+  },
+  {
+    "title": "Manila",
+    "lat": 14.599512,
+    "lng": 120.984219
+  },
+  {
+    "title": "Palawan",
+    "lat": 9.967216,
+    "lng": 118.78551
+  },
+  {
+    "title": "New York",
+    "lat": 40.712784,
+    "lng": -74.005941
+  },
+  {
+    "title": "Osaka",
+    "lat": 34.693738,
+    "lng": 135.502165
+  },
+  {
+    "title": "Kyoto",
+    "lat": 35.011636,
+    "lng": 135.768029
+  },
+  {
+    "title": "Hiroshima",
+    "lat": 34.385203,
+    "lng": 132.455293
+  },
+  {
+    "title": "Takayama",
+    "lat": 36.146124,
+    "lng": 137.252173
+  },
+  {
+    "title": "Tokyo",
+    "lat": 35.689487,
+    "lng": 139.691706
+  },
+  {
+    "title": "Berlin",
+    "lat": 52.520007,
+    "lng": 13.404954
+  },
+  {
+    "title": "London",
+    "lat": 51.507351,
+    "lng": -0.127758
+  },
+  {
+    "title": "Bristol",
+    "lat": 51.454513,
+    "lng": -2.58791
+  },
+  {
+    "title": "Queenstown",
+    "lat": -45.031162,
+    "lng": 168.662644
+  },
+  {
+    "title": "Christchurch",
+    "lat": -43.532054,
+    "lng": 172.636225
+  },
+  {
+    "title": "Amsterdam",
+    "lat": 52.370216,
+    "lng": 4.895168
+  },
+  {
+    "title": "Whitstable",
+    "lat": 51.361047,
+    "lng": 1.024256
+  },
+  {
+    "title": "Cotswolds",
+    "lat": 51.76882,
+    "lng": -2.126519
+  },
+  {
+    "title": "Manchester",
+    "lat": 53.480759,
+    "lng": -2.242631
+  },
+  {
+    "title": "York",
+    "lat": 53.959965,
+    "lng": -1.087298
+  },
+  {
+    "title": "Leeds",
+    "lat": 53.800755,
+    "lng": -1.549077
+  },
+  {
+    "title": "Wincle",
+    "lat": 53.191506,
+    "lng": -2.063202
+  },
+  {
+    "title": "Oxford",
+    "lat": 51.752021,
+    "lng": -1.257726
+  },
+  {
+    "title": "Windemere",
+    "lat": 54.373931,
+    "lng": -2.937645
+  },
+  {
+    "title": "Keswick",
+    "lat": 54.601276,
+    "lng": -3.134706
+  },
+  {
+    "title": "Rye",
+    "lat": 50.949708,
+    "lng": 0.73726
+  },
+  {
+    "title": "Hastings",
+    "lat": 50.854259,
+    "lng": 0.573453
+  },
+  {
+    "title": "Dover",
+    "lat": 51.127876,
+    "lng": 1.313403
+  },
+  {
+    "title": "Newquay",
+    "lat": 50.415081,
+    "lng": -5.075705
+  },
+  {
+    "title": "Snowdonia",
+    "lat": 52.918011,
+    "lng": -3.89122
+  },
+  {
+    "title": "Bath",
+    "lat": 51.380366,
+    "lng": -2.361524
+  },
+  {
+    "title": "Penzance",
+    "lat": 50.11539,
+    "lng": -5.536897
+  },
+  {
+    "title": "Edinburgh",
+    "lat": 55.953252,
+    "lng": -3.188267
+  },
+  {
+    "title": "Glasgow",
+    "lat": 55.864237,
+    "lng": -4.251806
+  },
+  {
+    "title": "Loch Lomond",
+    "lat": 56.111368,
+    "lng": -4.62886
+  },
+  {
+    "title": "Dublin",
+    "lat": 53.349805,
+    "lng": -6.26031
+  },
+  {
+    "title": "Cork",
+    "lat": 51.896892,
+    "lng": -8.486316
+  },
+  {
+    "title": "Cliffs of Moher",
+    "lat": 52.97188,
+    "lng": -9.42651
+  },
+  {
+    "title": "Dingle",
+    "lat": 52.140939,
+    "lng": -10.264014
+  },
+  {
+    "title": "Galway",
+    "lat": 53.270668,
+    "lng": -9.056791
+  },
+  {
+    "title": "Brussels",
+    "lat": 50.850346,
+    "lng": 4.351721
+  },
+  {
+    "title": "Bruges",
+    "lat": 51.209348,
+    "lng": 3.2247
+  },
+  {
+    "title": "Kortrijk",
+    "lat": 50.819478,
+    "lng": 3.257726
+  },
+  {
+    "title": "Paris",
+    "lat": 48.856614,
+    "lng": 2.352222
+  },
+  {
+    "title": "Como",
+    "lat": 45.80806,
+    "lng": 9.085176
+  },
+  {
+    "title": "Milan",
+    "lat": 45.464204,
+    "lng": 9.189982
+  },
+  {
+    "title": "Venice",
+    "lat": 45.440847,
+    "lng": 12.315515
+  },
+  {
+    "title": "Padua",
+    "lat": 45.406435,
+    "lng": 11.876761
+  },
+  {
+    "title": "Bologna",
+    "lat": 44.494887,
+    "lng": 11.342616
+  },
+  {
+    "title": "Pisa",
+    "lat": 43.722839,
+    "lng": 10.401689
+  },
+  {
+    "title": "Florence",
+    "lat": 43.76956,
+    "lng": 11.255814
+  },
+  {
+    "title": "San Gimignano",
+    "lat": 43.467632,
+    "lng": 11.043491
+  },
+  {
+    "title": "Cinque Terra",
+    "lat": 44.463344,
+    "lng": 10.417708
+  },
+  {
+    "title": "La Spezia",
+    "lat": 44.10804,
+    "lng": 9.82888
+  },
+  {
+    "title": "Rome",
+    "lat": 41.902783,
+    "lng": 12.496366
+  },
+  {
+    "title": "Trieste",
+    "lat": 45.63611,
+    "lng": 13.80417
+  },
+  {
+    "title": "Pompeii",
+    "lat": 40.746157,
+    "lng": 14.498934
+  },
+  {
+    "title": "Naples",
+    "lat": 40.851775,
+    "lng": 14.268124
+  },
+  {
+    "title": "Amalfi",
+    "lat": 40.634003,
+    "lng": 14.602681
+  },
+  {
+    "title": "Positano",
+    "lat": 40.628053,
+    "lng": 14.484981
+  },
+  {
+    "title": "Sorrento",
+    "lat": 40.626292,
+    "lng": 14.375798
+  },
+  {
+    "title": "Capri",
+    "lat": 40.55069,
+    "lng": 14.2428
+  },
+  {
+    "title": "Copenhagen",
+    "lat": 55.676097,
+    "lng": 12.568337
+  },
+  {
+    "title": "Malmö",
+    "lat": 55.604981,
+    "lng": 13.003822
+  },
+  {
+    "title": "Budapest",
+    "lat": 47.497912,
+    "lng": 19.040235
+  },
+  {
+    "title": "Barcelona",
+    "lat": 41.385064,
+    "lng": 2.173403
+  },
+  {
+    "title": "Bilbao",
+    "lat": 43.263013,
+    "lng": -2.934985
+  },
+  {
+    "title": "San Sebastian",
+    "lat": 43.318334,
+    "lng": -1.981231
+  },
+  {
+    "title": "Madrid",
+    "lat": 40.416775,
+    "lng": -3.70379
+  },
+  {
+    "title": "Cordoba",
+    "lat": 37.888175,
+    "lng": -4.779383
+  },
+  {
+    "title": "Seville",
+    "lat": 37.389092,
+    "lng": -5.984459
+  },
+  {
+    "title": "Granada",
+    "lat": 37.177336,
+    "lng": -3.598557
+  },
+  {
+    "title": "Lisbon",
+    "lat": 38.722252,
+    "lng": -9.139337
+  },
+  {
+    "title": "Sintra",
+    "lat": 38.802913,
+    "lng": -9.381649
+  },
+  {
+    "title": "Bucharest",
+    "lat": 44.426767,
+    "lng": 26.102538
+  },
+  {
+    "title": "Bran",
+    "lat": 45.519192,
+    "lng": 25.369683
+  },
+  {
+    "title": "Sighisora",
+    "lat": 46.219702,
+    "lng": 24.796388
+  },
+  {
+    "title": "Sibiu",
+    "lat": 45.798327,
+    "lng": 24.125583
+  },
+  {
+    "title": "Casablanca",
+    "lat": 33.57311,
+    "lng": -7.589843
+  },
+  {
+    "title": "Fes",
+    "lat": 34.018125,
+    "lng": -5.007845
+  },
+  {
+    "title": "Todra Gorge",
+    "lat": 31.5235,
+    "lng": -5.527647
+  },
+  {
+    "title": "Marrakech",
+    "lat": 31.629472,
+    "lng": -7.981084
+  },
+  {
+    "title": "Merzouga",
+    "lat": 31.080168,
+    "lng": -4.013361
+  },
+  {
+    "title": "Keflavik",
+    "lat": 63.999755,
+    "lng": -22.558272
+  },
+  {
+    "title": "Reykyavik",
+    "lat": 64.126521,
+    "lng": -21.817439
+  },
+  {
+    "title": "Ólafsvík",
+    "lat": 64.896048,
+    "lng": -23.706026
+  },
+  {
+    "title": "Gulfoss",
+    "lat": 64.327072,
+    "lng": -20.119948
+  },
+  {
+    "title": "Tallinn",
+    "lat": 59.430885,
+    "lng": 24.740769
+  },
+  {
+    "title": "Tartu",
+    "lat": 58.360697,
+    "lng": 26.727757
+  },
+  {
+    "title": "Viljandi",
+    "lat": 58.360563,
+    "lng": 25.580523
+  },
+  {
+    "title": "Sigulda",
+    "lat": 57.149563,
+    "lng": 24.860333
+  },
+  {
+    "title": "Riga",
+    "lat": 56.949649,
+    "lng": 24.105186
+  },
+  {
+    "title": "Hill of Crosses",
+    "lat": 56.015278,
+    "lng": 23.416668
+  },
+  {
+    "title": "Klaipeda",
+    "lat": 55.703295,
+    "lng": 21.14428
+  },
+  {
+    "title": "Kaunas",
+    "lat": 54.898521,
+    "lng": 23.903597
+  },
+  {
+    "title": "Vilnius",
+    "lat": 54.687156,
+    "lng": 25.279651
+  },
+  {
+    "title": "Prague",
+    "lat": 50.075538,
+    "lng": 14.4378
+  },
+  {
+    "title": "Krakow",
+    "lat": 50.06465,
+    "lng": 19.94498
+  },
+  {
+    "title": "Auschwitz",
+    "lat": 50.035833,
+    "lng": 19.178333
+  },
+  {
+    "title": "Vienna",
+    "lat": 48.20833,
+    "lng": 16.373064
+  },
+  {
+    "title": "Ljubljana",
+    "lat": 46.056947,
+    "lng": 14.505751
+  },
+  {
+    "title": "Bled",
+    "lat": 46.368327,
+    "lng": 14.11458
+  },
+  {
+    "title": "Zagreb",
+    "lat": 45.815011,
+    "lng": 15.981919
+  },
+  {
+    "title": "Plitvice",
+    "lat": 44.865397,
+    "lng": 15.582012
+  },
+  {
+    "title": "Split",
+    "lat": 43.508132,
+    "lng": 16.440193
+  },
+  {
+    "title": "Dubrovnik",
+    "lat": 42.650661,
+    "lng": 18.094424
+  },
+  {
+    "title": "Kotor",
+    "lat": 42.424662,
+    "lng": 18.771234
+  },
+  {
+    "title": "Tirana",
+    "lat": 41.327546,
+    "lng": 19.818698
+  },
+  {
+    "title": "Athens",
+    "lat": 37.98381,
+    "lng": 23.727539
+  },
+  {
+    "title": "Milos",
+    "lat": 36.691446,
+    "lng": 24.393566
+  },
+  {
+    "title": "Santorini",
+    "lat": 36.393156,
+    "lng": 25.461509
+  },
+  {
+    "title": "Kos",
+    "lat": 36.8915,
+    "lng": 27.2877
+  },
+  {
+    "title": "Bodrum",
+    "lat": 37.0344,
+    "lng": 27.4305
+  },
+  {
+    "title": "Selcuk",
+    "lat": 37.9508,
+    "lng": 27.37
+  },
+  {
+    "title": "Pamukkale",
+    "lat": 37.9137,
+    "lng": 29.1187
+  },
+  {
+    "title": "Fethiye",
+    "lat": 36.6592,
+    "lng": 29.1263
+  },
+  {
+    "title": "Antalya",
+    "lat": 36.8969,
+    "lng": 30.7133
+  },
+  {
+    "title": "Konya",
+    "lat": 37.8746,
+    "lng": 32.4932
+  },
+  {
+    "title": "Cappadocia",
+    "lat": 38.6689,
+    "lng": 34.8368
+  },
+  {
+    "title": "Istanbul",
+    "lat": 41.0082,
+    "lng": 28.9784
+  },
+  {
+    "title": "Gallipoli",
+    "lat": 40.41667,
+    "lng": 26.66667
+  },
+  {
+    "title": "Troia",
+    "lat": 39.9575,
+    "lng": 26.238888
+  },
+  {
+    "title": "St Petersburg",
+    "lat": 59.9343,
+    "lng": 30.3351
+  },
+  {
+    "title": "Moscow",
+    "lat": 55.7558,
+    "lng": 37.6173
+  },
+  {
+    "title": "Irkutsk",
+    "lat": 52.287,
+    "lng": 104.305
+  },
+  {
+    "title": "Ulan Ude",
+    "lat": 51.8239,
+    "lng": 107.6073
+  },
+  {
+    "title": "Ulan Bator",
+    "lat": 47.8864,
+    "lng": 106.9057
+  },
+  {
+    "title": "Hong Kong",
+    "lat": 22.3964,
+    "lng": 114.1095
+  },
+  {
+    "title": "Sandakan",
+    "lat": 5.8394,
+    "lng": 118.1172
+  },
+  {
+    "title": "Semporna",
+    "lat": 4.4794,
+    "lng": 118.6115
+  },
+  {
+    "title": "Mabul",
+    "lat": 4.2457,
+    "lng": 118.6316
+  },
+  {
+    "title": "Brogaig",
+    "lat": 57.6436,
+    "lng": -6.2653
+  },
+  {
+    "title": "Fairy Pools",
+    "lat": 57.2503,
+    "lng": -6.2583
+  },
+  {
+    "title": "Eilean Donan Castle",
+    "lat": 57.2739,
+    "lng": -5.5162
+  },
+  {
+    "title": "Loch Ness",
+    "lat": 57.3229,
+    "lng": -4.4244
+  }
+]

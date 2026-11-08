@@ -1,0 +1,27 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import JournalSidebar from '../../../components/JournalSidebar.astro';
+import PostSummary from '../../../components/PostSummary.astro';
+import { getPosts, getTags, tagSlug, type Post } from '../../../lib/journal';
+
+export const getStaticPaths = (async () => {
+  const posts = await getPosts();
+  return getTags(posts).map((tag) => ({
+    params: { tag: tagSlug(tag) },
+    props: { tag, posts: posts.filter((p) => p.data.tags.includes(tag)) },
+  }));
+}) satisfies GetStaticPaths;
+
+const { tag, posts } = Astro.props as { tag: string; posts: Post[] };
+---
+
+<Base title={`${tag} · Journal`} description={`Journal entries about ${tag}.`}>
+  <div class="journal">
+    <div class="journal-main">
+      <h1>{tag}</h1>
+      {posts.map((post) => <PostSummary post={post} />)}
+    </div>
+    <JournalSidebar />
+  </div>
+</Base>

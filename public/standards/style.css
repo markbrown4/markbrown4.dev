@@ -1,0 +1,257 @@
+html { margin: 0 }
+body {
+	font-size: 100%;
+	font-family: Calluna;
+	color: #444;
+	padding: 0 300px 100px 40px;
+	max-width: 800px;
+	margin: 0 0 0 auto;
+	line-height: 1.5;
+	background: #fafafa url(tile.gif) repeat 0 0;
+}
+h1,h2,h3,h4,h5 {
+	font-family: 'League Gothic','Arial Narrow', Helvetica;
+	font-weight: lighter;
+	text-transform: uppercase;
+	font-size: 300%;
+	color: #3E3E3E;
+	line-height: 1;
+	margin: 1em 0;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5), 0 -1px 0 #fff;
+}
+.lower{ text-transform: lowercase } 
+a {
+	color: #4083A9;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -1px 0 #fff;
+	word-break: break-all;
+}
+a:hover { color: #275168 }
+h1 {
+	margin: .5em 0;
+	padding: 0;
+	color: #fff;
+	font-style: normal;
+	text-shadow: 0 2px 0 rgba(0,0,0,.4), 0 -1px 0 rgba(255,255,255,.2);
+}
+h2 {
+	margin: 0 0 1em;
+	padding: 1em 0 0;
+	font-size: 280%;
+	border-bottom: 3px solid #3E3E3E;
+}
+h3 { font-size: 220%; margin-bottom: 0 }
+h4 { font-size: 190%; margin-bottom: 0 }
+p,dl,h4 { padding: 0 15px }
+ul { padding: 0 2em }
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav {
+	position: fixed;
+	top: 0;
+	right: 40px;
+	width: 200px;
+	counter-reset: navchapter;
+}
+nav a:before {
+	content: counter(navchapter) ". ";
+    counter-increment: navchapter;
+}
+div { text-align: center }
+abbr { border-bottom: 1px dotted #333 }
+.tag {
+	color: #667A7A;
+	font-family: Monaco, monospace;
+	font-size: .8em;
+}
+pre {
+	padding: 7px;
+	border: 1px solid #ccc;
+	background: #fff;
+	display: block;
+}
+code {
+	font-family: Monaco, monospace;
+	padding: 20px 15px;
+	background: #282C2C;
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	line-height: 1.45;
+	overflow: auto;
+}
+code .b { color: #7BE1E6 }
+code .y { color: #FEFFAB }
+code .g { color: #AEAEAE }
+dt {
+	float: left;
+	width: 80px;
+	font-weight: bold;
+	color: #3E3E3E;
+}
+dd { margin-left: 90px; display: block }
+.frame {
+	background: #fff;
+	padding: 7px;
+	border: 1px solid;
+	border-color: #ddd #ccc #aaa;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.frame q {
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.frame:first-child { margin-top: 50px }
+.frame q:first-child { border-bottom: none }
+.frame q:last-child { border-top: none }
+img {
+	display: block;
+	width: 100%;
+}
+.media { float: right; margin: 0 0 20px 20px; padding: 20px 10px }
+q {
+	display: block;
+	margin: 0 auto;
+	padding: 2px;
+	border: 2px solid #D24B2D;
+	background: #fff;
+	color: #fff;
+	position: relative;
+	-moz-box-shadow: 0 3px 5px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.2);
+	box-shadow: 0 3px 5px rgba(0,0,0,.2);
+}
+q strong { font-style: normal }
+q:before {
+	content: "“";
+	position: absolute;
+	font-size: 80px;
+	top: 20px;
+	left: 20px;
+	line-height: 1;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.3);
+}
+q:after {
+	content: "”";
+	display: block;
+	position: absolute;
+	font-size: 80px;
+	bottom: -20px;
+	right: 20px;
+	line-height: 1;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.3);
+}
+q span {
+	display: block;
+	text-align: center;
+	background: #D24B2D;
+	background-image: -moz-radial-gradient(50% 50% , circle, #DF806B 0%, #D24B2D 100%);
+	background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#DF806B), to(#D24B2D));
+	background-image: -o-linear-gradient(top, #DF806B, #D24B2D);
+	padding: 20px 80px;
+	font-size: 110%;
+	font-style: italic;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+}
+body {
+    counter-reset: chapter;
+}
+h2:not(#toc):not(#foreword):not(#go):before {
+    content: counter(chapter) ". ";
+    counter-increment: chapter;
+}
+.amp { /* everybody do the cederholm */
+	font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",serif;
+	font-size: 1.1em;
+	font-style: italic;
+	line-height: 10%;
+}
+/* bling */
+pre,.frame { position: relative }
+pre:before, pre:after, .frame:before, .frame:after {
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	position: absolute;
+	left: 10px;
+	bottom: 15px;
+	z-index: -1;
+	width: 50%;
+	max-width: 300px;
+	height: 20%;
+	content: "";
+}
+pre:after, .frame:after {
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	right: 10px;
+	left: auto;
+}
+
+@media print {
+	body { padding: 20px }
+	.frame:first-child { margin-top: 0 }
+	h2:not(#toc):not(#foreword):not(#go) { page-break-before: always }
+	pre { page-break-inside: avoid }
+	nav {
+		position: static;
+		width: 100%;
+	}
+	nav ol {
+		list-style: decimal;
+		margin: 1em 2em;
+		padding: 0;
+	}
+	.frame { width: 70% }
+	q { border-color: #000 }
+	q span { background: #FFF0ED !important; text-shadow: none }
+}
+@media (min-device-width:1024px) and (max-width:800px), (max-device-width:480px) {
+	body { padding: 10px }
+	nav {
+		position: static;
+		width: 100%;
+	}
+}
+@media (min-device-width:1024px) and (max-width:480px), (max-device-width:480px) {
+	q span { padding: 10px }
+	h1 { margin: 0 }
+	q:before, q:after { content: "" }
+	.frame:first-child { margin-top: 0 }
+}
+
+/* Generated by Font Squirrel */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('fonts/League_Gothic-webfont.eot');
+    src: url('fonts/League_Gothic-webfont.eot?iefix') format('eot'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+		 url('fonts/League_Gothic-webfont.svg#webfont1Lb5Pdit') format('svg');
+}
+@font-face {
+    font-family: 'Calluna';
+    src: url('fonts/calluna-regular-webfont.eot');
+    src: url('fonts/calluna-regular-webfont.eot?iefix') format('eot'),
+         url('fonts/calluna-regular-webfont.woff') format('woff'),
+         url('fonts/calluna-regular-webfont.ttf') format('truetype'),
+		 url('fonts/calluna-regular-webfont.svg#webfontRWeBbjag') format('svg');
+}
+@font-face {
+    font-family: 'Monaco';
+    src: url('fonts/monaco-webfont.eot');
+    src: url('fonts/monaco-webfont.eot?iefix') format('eot'),
+         url('fonts/monaco-webfont.woff') format('woff'),
+         url('fonts/monaco-webfont.ttf') format('truetype'),
+		 url('fonts/monaco-webfont.svg#webfontg8lhCB0C') format('svg');
+}

@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+
+const talks = [
+  {
+    title: 'A Eulogy for CoffeeScript',
+    url: 'https://markbrown4.github.io/presentation-coffee',
+    date: '2016-08-12',
+    at: { label: 'MelbJS', url: 'https://melbjs.com/' },
+    blurb: 'Things that I’ll miss in the CoffeeScript to ES6 transition.',
+  },
+  {
+    title: 'Working off the Main Thread',
+    url: 'https://markbrown4.github.io/presentation-web-workers/',
+    date: '2016-02-10',
+    at: { label: 'MelbJS', url: 'https://melbjs.com/' },
+    blurb: 'Exploring Henrik Joreteg’s <a href="https://github.com/HenrikJoreteg/feather-app">feather-app</a> and how to use Web Workers to make great apps for mobile.',
+  },
+  {
+    title: 'React at yourgrocer.com.au',
+    url: 'https://markbrown4.github.io/presentation-yg/',
+    date: '2015-07-28',
+    at: { label: 'ReactMelb', url: 'https://www.meetup.com/react-melbourne/' },
+    blurb: 'Implementing React in an existing web app, rolling your own Flux implementation, and testing.',
+  },
+];
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+---
+
+<Base title="Sharing" description="Talks and writing by Mark Brown.">
+  <div class="narrow">
+    <h1 class="visually-hidden">Sharing</h1>
+    <div class="prose intro">
+      <p>I have learned much of what I know from asking questions on forums and attending meetups over the years, so I try to give back by sharing what I know. You can find me at JavaScript meetups in Melbourne, and I’ve done some writing for SitePoint too.</p>
+    </div>
+    <div class="prose">
+      <h2>Talks</h2>
+      <ul class="talks">
+        {talks.map((talk) => (
+          <li>
+            <p>
+              <a href={talk.url}><strong>{talk.title}</strong></a>
+              <span class="meta"><time datetime={talk.date}>{fmt(talk.date)}</time> · <a href={talk.at.url}>{talk.at.label}</a></span>
+            </p>
+            <p set:html={talk.blurb} />
+          </li>
+        ))}
+      </ul>
+      <h2>Writing</h2>
+      <p>I enjoy writing for the <a href="https://www.sitepoint.com/author/mbrown/">JavaScript channel</a> at SitePoint, and you’ll often find me posting in the <a href="https://www.sitepoint.com/community/c/javascript">JavaScript forum</a> too.</p>
+    </div>
+  </div>
+</Base>

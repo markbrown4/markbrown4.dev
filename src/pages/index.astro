@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { yearsExperience } from '../lib/journal';
+---
+
+<Base>
+  <div class="about">
+    <div class="about-main">
+      <h1 class="visually-hidden">About Mark Brown</h1>
+      <div class="prose intro">
+        <p>Hello, I’m a Software Engineer with over {yearsExperience()} years experience building web and native apps.</p>
+        <p>Lately I’ve been working with Ruby and JavaScript helping the team at Ferocia build <a href="https://up.com.au/">Up</a>, a digital bank that customers love. I strive to make an impact.</p>
+      </div>
+      <div class="prose">
+        <p>I work across the stack to ship features end to end. From crafting the UI and animations to data migrations, modelling, APIs and responding to customer feedback.</p>
+        <p>I’ve specialised at different times in web standards, accessibility, data visualisation and front-end engineering. Now I consider myself a generalist. Getting delightful software into customers’ hands quickly and seeing what works is what I get a kick out of. I build working software with readable code that’s well tested.</p>
+        <p>Technology aside, I’m honest, a keen learner and enjoy growing my own food.</p>
+      </div>
+    </div>
+    <aside class="about-aside">
+      <div class="frame"><img src="/images/me.jpg" alt="Mark Brown" width="300" height="300" /></div>
+      <p>I’m currently working full time in Melbourne with the team building a better banking experience, <a href="https://up.com.au/">Up</a>.</p>
+    </aside>
+  </div>
+</Base>

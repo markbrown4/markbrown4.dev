@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<title>Front end standards</title>
+<meta name="description" content="Front end web development by Mark Brown. HTML, CSS &amp; Javascript">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1313850-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+
+<div class="frame">
+	<q><span><h1>Being a web developer</h1></span></q>
+	<img src="chewy.jpg">
+	<q><span>
+		Is as awesome as Chewbacca riding a squirrel, fighting Nazis with a cross bow.<br>
+		<strong>- @codepo8</strong>
+	</span></q>
+</div>
+<nav>
+	<h2 id="toc">Table of contents</h2>
+	<ol>
+		<li><a href="#browsers">Browsers</a>
+		<li><a href="#html">HTML</a>
+		<li><a href="#css">CSS</a>
+		<li><a href="#js">Javascript</a>
+		<li><a href="#frameworks">Frameworks</a>
+		<li><a href="#performance">Performance</a>
+		<li><a href="#shiny">HTML5 / CSS3</a>
+		<li><a href="#access">Accessibility</a>
+	</ol>
+</nav>
+
+<h2 id="foreword">Foreword</h2>
+<p>This little book is to aid a shared understanding of front-end development best practice at <abbr title="PageUp People">PUP</abbr>.</p>
+<p>It's to help us deliver high quality content that works better, reaches more people - not only in today's browsers <span class="amp">&amp;</span> devices, but in tomorrows.</p>
+
+<h2 id="browsers">Browsers</h2>
+<div class="frame">
+	<img src="browsers.png">
+</div>
+<h3>Statistics, naturally</h3>
+<p>Our own user logs are <em>almost</em> all that matters in deciding which browsers we officially support.<br>
+However, if we give our clients good reason to upgrade or switch to a newer, more standards compliant browser our jobs will be easier and our work higher quality as we won't need to be spending time fixing bugs in older browsers.</p>
+<h4>Do web sites need to look the same in every browser?</h4>
+<p><strong>No.</strong>  A page needs to serve its purpose in function and not appear broken.<br>
+It's not about browsers, it's about serving the users of our software by delivering content that is valuable to them.</p>
+
+<h3>We currently support</h3>
+<p>The latest versions of all modern browsers, IE6-9 <span class="amp">&amp;</span> top-level modern mobile browsers Opera <span class="amp">&amp;</span> Safari.</p>
+<ul>
+	<li>IE6-9
+	<li>Firefox
+	<li>Chrome
+	<li>Safari
+	<li>Opera
+</ul>
+<hr>
+<ul>  
+	<li>Opera Mobile <span class="amp">&amp;</span> Opera Mini
+	<li>Mobile Safari
+</ul>
+
+<p><strong>Install the latest versions of these browsers from U:/</strong></p>
+<p>IE6-8 are currently best tested on <abbr title="Virtual machine">VM</abbr>'s pageuptest-ie[6,7,8] or run your own <abbr title="Virtual machine">VM</abbr>'s.</p>
+<p>You can test Opera Mobile from your desktop machine - You can also introspect Opera mobile inside a phone using Opera Dragonfly.</p>
+<p>The iPhone SDK comes with Mobile Safari but is mac only, there's plenty of iPhones and iPads around the office. Make sure error reporting is enabled in Safari settings.
+<p>If you write front-end code you will need to test in all of these browsers to ensure it looks ok and functions as it should.</p>
+<ul>
+	<li>Scale the window down and see what happens at different screen resolutions and with different amounts of content.
+	<li>Javascript will throw errors if something is wrong, <em>most of the time</em>.
+</ul>
+
+<h3>Mobile</h3>
+<p>Mobile is hugely important today, we will need to review our mobile support regularly and follow the industry and our user-base.  It will soon be more important than the desktop.</p>
+<p>Writing front-end code without considering mobile doesn't cut the mustard, it cuts the cheese.</p>
+
+<h4>Simple things we can do</h4>
+<ul>
+	<li>Optimise styles for small screens with @media queries <span class="amp">&amp;</span> viewport meta
+	<li>Add touch support - 44px x 44px minimum tap size
+	<li>Don't rely on :hover, or mouseover events to get to content
+	<li>Keep popups stand-alone - they cannot send data to the parent(e.g. binoculars)
+	<li>Avoid scrolling content areas - It can be achieved in Mobile Safari using touch events and CSS transitions but it's not easy
+	<li>Keep bandwidth to a minimum
+</ul>
+<p><a href="http://twitter.com/ppk/">@ppk</a> writes about mobile at <a href="http://www.quirksmode.org/mobile/">http://www.quirksmode.org/mobile/</a></p>
+
+<h3>Web standards</h3>
+<p>To "Write once, deploy everywhere" was the great goal of the web standards movement. 
+Thanks to the efforts of web designers <span class="amp">&amp;</span> browser vendors supporting web standards, browser compatibility is far easier today than it ever has been.</p>
+<p>The W3C and WHATWG are groups that debate "What the web should be", argue over APIs and publish standards for browser vendors and developers to implement. 
+These are open groups, anyone interested enough in them can contribute.</p>
+<ul>
+	<li><a href="http://www.w3.org/TR/">http://www.w3.org/TR/</a>
+	<li><a href="http://www.whatwg.org/specs/">http://www.whatwg.org/specs/</a>
+</ul>
+<h4>Follow</h4>
+<p>Following changes to the specs and listening to developers<span class="amp">&amp;</span> designers is important. Follow changes at
+	<a href="http://twitter.com/w3c/">@w3c</a>
+	<a href="http://twitter.com/whatwg/">@whatwg</a>
+
+<p>People to follow
+	<a href="http://twitter.com/paul_irish/">@paul_irish</a>
+	<a href="http://twitter.com/brucel/">@brucel</a>
+	<a href="http://twitter.com/nimbuin/">@nimbuin</a>
+	<a href="http://twitter.com/thecssninja/">@thecssninja</a>
+	<a href="http://twitter.com/LeaVerou/">@leaverou</a>
+<a href="http://twitter.com/slicknet/">@slicknet</a>
+<a href="http://twitter.com/stubbornella/">@stubbornella</a></p>
+
+<p>Read from great authors
+	<a href="http://simplebits.com/">Dan Cederholm</a>
+	<a href="http://www.stuffandnonsense.co.uk/">Andy Clarke</a>
+	<a href="http://adactio.com/">Jeremy Keith</a></p>
+
+<p>Join a forum
+	<a href="http://sitepoint.com/forums/">SitePoint</a></p>
+
+<h3>Rendering engines</h3>
+<p>The rendering engine in a browser reads HTML, CSS, other standards like XSLT, SVG, and paints the pixels on the screen.</p>
+<h4>The four biggies</h4>
+<dl>
+	<dt>Trident</dt>
+		<dd>IE</dd>
+	<dt>Gecko</dt>
+		<dd>Firefox</dd>
+	<dt>Webkit</dt>
+		<dd>Chrome, Safari, Apple <span class="amp">&amp;</span> Android mobile devices.</dd>
+	<dt>Presto</dt>
+		<dd>Opera, Opera mini</dd>
+</dl>
+<p>Understanding the differences and quirks in these 4 rendering engines will reduce the amount of time needed to test layout <span class="amp">&amp;</span> rendering.</p>
+
+
+
+
+<h2 id="html">HTML</h2>
+<q><span>HTML is the unifying language of the World Wide Web. Using just the simple tags it contains, the human race has created an astoundingly diverse network of hyperlinked documents, from Amazon, eBay, and Wikipedia, to personal blogs and websites dedicated to cats that look like Hitler.<br>
+- @adactio
+</span></q>
+
+<h3>Semantics</h3>
+<p>HTML gives meaning to content so that browsers and devices can then give that meaning to a user. e.g.
+<ul>
+	<li>Headings <span class="tag">h1</span> to <span class="tag">h5</span> form a document outline and can give a table of contents for easy navigation.
+	<li>A screen reader gets to a <span class="tag">&lt;table&gt;</span> and explains to a blind user how to navigate its content by rows/columns.
+	<li>When a user clicks on a <span class="tag">&lt;label for="email"&gt;</span> the associated input control gains focus <span class="tag">&lt;input id="email"&gt;</span>
+</ul>
+<p>If it's a <strong>heading</strong> use a <strong>heading</strong>.</p>
+<p>If it's <strong>tabular</strong> data use a <strong>table</strong>.</p>
+<p>If it's a list of links then make it so.</p>
+
+<h3>Lonely HTML</h3>
+<p>HTML should work without the presence of CSS or Javascript. 
+The content should be accessible, form submissions should work, the HTML on it's own should have value.<br>
+A good way to test the quality of the HTML is to disable images, CSS and Javascript and see how meaningful it is.</p>
+<p>If we write our HTML like this when we get around to redesigning the UI, the HTML doesn't have to be rewritten.</p>
+
+<h3>Which version?</h3>
+<p>HTML5 is the version we use, but HTML versions don't really matter. 
+Browsers understand the tags they support, regardless of the doctype / version we validate against.</p>
+<p>A doctype is necessary to force browsers to render in standards mode and prevent quirks mode head aches in ie.</p>
+<pre><code><span class="b">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset=<span class="y">"utf-8"</span>&gt;
+  &lt;title&gt;</span>I ♥ HTML<span class="b">&lt;/title&gt;
+  &lt;link rel=<span class="y">"stylesheet"</span> href=<span class="y">"style.css"</span>&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;</span>HTML5 <span class="b">&lt;abbr title=<span class="y">"For The Win"</span>&gt;</span>FTW<span class="b">&lt;/abbr&gt;</span>!<span class="b">&lt;/h1&gt;
+
+&lt;script src=<span class="y">"script.js"</span>&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</span></code></pre>
+<p>* Lower case tags, double quote attributes.</p>
+<h3>Best practices:</h3>
+<ul>
+	<li>Use as few "nothing elements"(span / div) and styling hooks(class / id attributes) as possible. The leaner the HTML is, the easier it is to work with.
+	<li>Feel free to use HTML5 tags / attributes but keep backwards compatibility in mind.
+	<li>Use utf-8 character encoding.
+	<li>Avoid inline styles or event handlers
+</ul>
+
+
+
+
+<h2 id="css">CSS</h2>
+
+<h3>Be stylish</h3>
+<ul>
+	<li>Keep CSS completely separate from the HTML
+	<li>Re-use specific modules e.g. reset, grid, forms, type, print
+	<li>use shorthand syntax wherever possible
+	<li>use lower-case-hyphenated .class-names and #ids
+	<li>code to a standards compliant browser first, then fix issues in IE
+</ul>
+
+<h3>Internet Explorer WTF?</h3>
+<p>We really should be thankful that non-ie browsers have such great consistency, I have never needed a CSS hack for a non-ie browser.</p>
+<p>Without IE, web development would just be too easy.</p>
+
+<h4>Prevent IE from switching to unhelpful modes:</h4>
+<pre><code><span class="b">&lt;meta http-equiv=<span class="y">"X-UA-Compatible"</span> content=<span class="y">"IE=edge,chrome=1"</span>&gt;</span></code></pre>
+<p>When testing your work in IE start with the latest version and work your way back.</p>
+
+<h4>IE conditional comments</h4>
+<pre><code><span class="g">&lt;!--[if lt IE 7 ]&gt; &lt;html class="ie6"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7 ]&gt;    &lt;html class="ie7"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8 ]&gt;    &lt;html class="ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt; <span class="b">&lt;html&gt;</span> &lt;!--&lt;![endif]--&gt;</span></code></pre>
+
+<p>If we replace our html tag with the above we can use classes to deliver styles to specific versions.<br>
+e.g. "float to fix" a bug with #myElement in ie6</p>
+<pre><code>.ie6 #myElement { <span class="b">float</span>: <span class="y">left</span>; <span class="b">width</span>: <span class="y">100%</span> }</code></pre>
+
+<h4>What is hasLayout?</h4>
+<p>The single most important thing you need to know about fixing bugs in IE! 
+Giving an element "Layout" will fix 99% of ie rendering bugs, as if by magic.  The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever ie versions need it.</p>
+<pre><code>.ie6 #myElement, .ie7 #myElement { <span class="b">zoom</span>: <span class="y">1</span> }</code></pre>
+<p><a href="http://www.sitepoint.com/forums/2041209-post24.html">http://www.sitepoint.com/forums/2041209-post24.html</a></p>
+
+<h4>Media queries</H4>
+<p>Deliver specific styles to different devices, they can test for things like:</p>
+<ul>
+	<li>screen or print
+	<li>width and height
+	<li>orientation – is mobile device in landscape or portrait mode?
+	<li>resolution
+</ul>
+	
+<p>You can optimise styes for different devices</p>
+<pre><code>@media only screen and (max-device-width: 480px) {
+  <span class="g">/* hide header and footer on small screen devices */</span>
+  #header, #footer { <span class="b">display</span>: <span class="y">none</span> }
+}
+@media only screen and (max-width:800px) {
+  <span class="g">/* linearize navigation under 800px */</span>
+  nav, nav li, nav a { <span class="b">float</span>: <span class="y">none</span>; <span class="b">width</span>: <span class="y">100%</span> }
+}</code></pre>
+
+<p>See <a href="http://colly.com/">http://colly.com/</a> for a great example</p>
+
+<p>The viewport meta tag is also needed to instruct a mobile device to keep the viewport to the amount of pixels it has on the screen i.e. prevent it from zooming out like a desktop version.</p>
+<pre><code><span class="b">&lt;meta name=<span class="y">"viewport"</span> content=<span class="y">"initial-scale=1.0, width=device-width"</span>&gt;</span>
+</code></pre>
+<p>Great article on viewport and media queries <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/</a></p>
+
+<h3>Best practices:</h3>
+<ul>
+	<li>Use meaningful class names and IDs - e.g. "loading" as opposed to "bigYellowSpinnyThing"
+	<li>Control the margin and padding on all the elements you use.
+	<li>Avoid absolute positioning
+	<li>Avoid !important
+	<li>Don't suffer from divitus and classitus
+	<li>Don't use breaks <span class="tag">&lt;br&gt;</span> just to make space in your layout
+	<li>Avoid hacks unless there is no other way to achieve what you want
+</ul>
+
+
+
+<h2 id="js">Javascript</h2>
+
+<q><span>Hold on there Bald Eagle. Why are we always in such a hurry?<br>
+	<strong>- @malarkey</strong>
+</span></q>
+
+<h3>Moving parts</h3>
+<p>Javascript sits on top of the HTML and CSS foundation and enhances the user experience <span class="amp">&amp;</span> behaviour of the page, that's it.</p>
+
+<h4>What is javascript good for?</h4>
+<ul>
+	<li>User interaction
+	<li>User experience - e.g. Responsiveness
+	<li>Dynamic behaviour
+	<li>Animation
+	<li>Make pages easier to use
+	<li>Aid accessibility - e.g. add keyboard support.
+	<li>Shims - Adding support to browsers for features they don't natively support 
+</ul>
+
+<h4>Progressive enhancement</h4>
+<p>Is an important concept, it means making a page work without a feature that may / may not be supported first. 
+If a feature is supported the user gets the benefit, if not - it still works.</p>
+<p>If we treat javascript like this it makes our code higher quality and prevents atrocities like:</p>
+<pre><code><span class="b">&lt;a href=<span class="y">"javascript:myKillerFunction('sucks', true);"</span>&gt;</span>Click here<span class="b">&lt;/a&gt;</span></code></pre>
+<p>It means that if something breaks the page can continue to work without the enhancement.<br>Progressive enhancement also aids maintainability, keeping the javascript separate means there's no need to search all documents for function calls.</p>
+
+<h4>Clean API's</h4>
+<p>Because we are not cluttering the global scope we can have short awesome names for our methods<span class="amp">&amp;</span> variables.</p>
+<pre><code><span class="b">var</span> Toggler = {
+  open: <span class="b">function</span>() {},
+  close: <span class="b">function</span>() {},
+  toggle: <span class="b">function</span>() {}
+}	
+</code></pre>
+
+<h4>Optional arguments</h4>
+<p>Add only the absolutely necessary parameters as arguments, put all optional parameters into an options hash.</p>
+<pre><code><span class="b">function</span> circle(x,y,radius,options) {
+  options <span class="y">=</span> options <span class="y">||</span> {};
+}
+</code></pre>
+
+<h4>Controls</h4>
+<p>Controls are initialised via a container element with class="init" e.g. If you're initialising stuff onload use this.</p>
+<pre><code><span class="b">&lt;div class=<span class="y">"init"</span> data-control=<span class="y">"AwesomeToggler"</span>></span>
+</code></pre>
+<p>On load this would pick up the above element and init the AwesomeToggler Control, there's two init functions that can be defined, "initOnce" is helpful for degelated events, "init" will run for each instance of the control on the page.</p>
+<p>
+<pre><code>Controls.AwesomeToggler = {
+  initOnce: <span class="b">function</span>() {
+    $body.delegate(<span class="y">'.toggler .trigger'</span>, <span class="y">'click'</span>, <span class="b">function</span>() {});
+  },
+  init: <span class="b">function</span>() {
+    alert(<span class="y">'TOG'</span>);
+  }
+});
+</code></pre>
+
+<h3>Best practices:</h3>
+<ul>
+	<li>Favour the framework <span class="amp">&amp;</span> <abbr title="Don't Repeat Yourself">DRY</abbr>
+	<li>Avoid inline <span class="amp">&amp;</span> embedded js
+	<li>Keep global scope clean, put code into namespaces Page, Util, Controls
+	<li>Be defensive, feature detect
+	<li>Test performance in all browsers mentioned above - use <span class="tag">console.time</span> to track down bottlenecks.
+	<li>Minimise number of event listeners on a page, use event delegation
+	<li>Keep components as independent as possible
+	<li><span class="tag">var</span> every variable
+</ul>
+	
+
+<h2 id="frameworks">Frameworks</h2>
+
+<q><span>
+If you want to use a library you must have read it, understood it, agree with it, and not be able to write a better one on your best day of coding.<br>
+<strong>- @sentience</strong>
+</span></q>
+
+<p>Frameworks are not evil, they save time, fix cross browser compatibility issues and make us think in new ways. 
+But, they do add overhead so before we jump in bed with them, see above.</p>
+<h3>Javascript</h3>
+<p>We should only have one "Core" javascript framework, additional libraries for specific tasks not handled by the Core framework can be added if they meet the above requirements.<br>
+e.g. Effects <span class="amp">&amp;</span> animation, SVG, Charting, Shims(Add support for features that aren't natively supported by some browsers)</p>
+
+<h3>Read, Collaborate <span class="amp">&amp;</span> Contribute to open source</h3>
+<p>Open source frameworks are the product of really interested people.  Interested people create great stuff.</p>
+
+<p>Schools out, but keep learning
+	<a href="https://github.com/jquery">jquery</a>
+	<a href="https://github.com/mootools/">mootools</a>
+	<a href="https://github.com/sstephenson/prototype/">prototype</a>
+	<a href="https://github.com/madrobby/scriptaculous/">scriptaculous</a>
+	<a href="https://github.com/DmitryBaranovskiy/raphael/">raphaël</a></p>
+
+<p>Gain heroes
+	<a href="http://twitter.com/paul_irish/">Paul Irish</a>,
+	<a href="http://twitter.com/madrobby">Thomas Fuchs</a>,
+	<a href="http://twitter.com/jeresig/">John Resig</a>,
+	<a href="http://twitter.com/dmitrybaranovskiy/">Dmitry Baranovskiy</a></p>
+
+<h3>Roll your own</h3>
+<p>Create something great and share it with me.</p>
+
+
+
+<h2 id="performance">Performance</h2>
+<h3>YUI best practice</h3>
+<p>The YUI team has done as much research into front-end performance as anyone.</p>
+<p>Here's a cut down version of the YUI best practices for performance, reading the full article is highly recommended though. <a href="http://developer.yahoo.com/performance/rules.html">http://developer.yahoo.com/performance/rules.html</a></p>
+<p>Follow <a href="http://twitter.com/souders/">@souders</a> if you're interested in web performance.</p>
+
+<h4>Minimize HTTP Requests</h4>
+<p>Combine all scripts and stylesheets <span class="amp">&amp;</span> use image sprites to reduce the number of round trips to the server.</p>
+
+<h4>Use a Content Delivery Network</h4>
+<p>We should move all referenced files css, js, images etc. to dispersed servers like Akamai.</p>
+	
+<h4>Put Stylesheets at the Top</h4>
+<p>Putting stylesheets in the <span class="tag">&lt;head&gt;</span> allows the page to render progressively.</p>
+
+<h4>Put Scripts at the Bottom</h4>
+<p><span class="tag">&lt;script&gt;</span> tags block parallel downloads, put them last so other resources can be downloaded first.</p>
+
+<h4>Avoid Expressions</h4>
+<p>Expressions are a way of running javascript as part of a CSS rule in ie6-7.  They can be used to fix support for non-supported features - like fixed positioning.  The problem is they are constantly evaluated which can really slow down the page.</p>
+<pre><code>.ie6 .fixed {
+  <span class="b">top</span>: <span class="b">expression</span>(<span class="y">0</span>+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+<span class="y">'px'</span>);
+}</code></pre>
+
+<h4>Make JavaScript and CSS External</h4>
+<p>The Cache is our friend.  The only exception would be pages with one view per session which may benefit from inline script.</p>
+
+<h4>Minify JavaScript and CSS</h4>
+<p>We should use a minifier like JSMin, YUI Compressor or Closure Compiler to reduce the file size our CSS <span class="amp">&amp;</span> js.<br>
+Removing variables from the global scope can get better results from compression as the names can be shortened as they can't be accessed outside of their enclosing functions.</p>
+
+<pre><code><span class="b">var</span> canIBeShortened <span class="y">= 'no'</span>;
+(<span class="b">function</span>() {
+	<span class="b">var</span> willMyReallyLongVariableBeShortnedByTheMinifier <span class="y">= 'yes'</span>;
+	alert(willMyReallyLongVariableBeShortnedByTheMinifier);
+})();</code></pre>
+<pre><code><span class="g">// Minified</span>
+<span class="b">var</span> canIBeShortened<span class="y">="no"</span><span class="b">function</span>(){<span class="b">alert</span>(<span class="y">"yes"</span>)})()
+</code></pre>
+
+
+<h4>Avoid Redirects</h4>
+<p>Slows down the user experience.</p>
+
+<h4>Reduce the Number of DOM Elements</h4>
+<p>Smaller pages with fewer elements are faster to traverse and modify.</p>
+
+<h4>Minimize the Number of iframes</h4>
+<p>Costly even if blank because they are new windows, they also block the page's onload event.</p>
+	
+<h4>No 404<span class="lower">s</span></h4>
+<p>Look through monitoring and remove these unnecessary trips to the server.</p>
+
+<h4>Reduce Cookie Size</h4>
+<p>Transferred in the page headers, remove unnecessary cookies, keep small, set an Expires date.</p>
+
+<h4>Minimize DOM Access</h4>
+<p>Save references to elements in variables to prevent lookups, innerHTML is generally faster than DOM, avoid fixing layout with js.</p>
+
+<h4>Develop Smart Event Handlers</h4>
+<p>Minimise the amount of event listeners in a page with Event Delegation.<br>
+Prototype's "on" function registers an event listener on the body element once to handle all the occurrences of that event in the page. e.g.</p>
+<pre><code><span class="b">&lt;body&gt;
+  &lt;p&gt;
+    &lt;a href=<span class="y">"#"</span>&gt;
+      &lt;span&gt;</span>linky<span class="b">&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href=<span class="y">"#"</span>&gt;
+      &lt;span&gt;</span>linky 2<span class="b">&lt;/span&gt;
+    &lt;/a&gt;</span>
+</code></pre>
+<p>When a <span class="tag">&lt;span&gt;</span> element is clicked the event moves up through the tree, all the way to the body where the event handler can find which <span class="tag">&lt;span&gt;</span> element fired it.</p>
+<p>If you have 100 elements in the page you want respond to click events, Event delegation will save you.</p>
+<p>Learn <a href="http://icant.co.uk/sandbox/eventdelegation/">http://icant.co.uk/sandbox/eventdelegation/</a></p>
+
+<h4>Avoid IE Filters in CSS</h4>
+<p>Filters are "special features" in CSS for IE, they can slow down the page though, so use sparingly.</p>
+
+<h4>Optimize Images</h4>
+<p>Batch operations like the YUI image compressor, ImageOptim or sprite generators should be used to make the images as small as possible whilst keeping their quality.</p>
+
+<h4>Keep Components under 25K</h4>
+<p>The iPhone won't cache anything bigger than 25K uncompressed.</p>
+
+
+<h2 id="shiny">HTML5 / CSS3</h2>
+<h3>Shiny new toys</h3>
+<p>Go to town, but keep backwards compatibility and progressive enhancement in mind.  Making pages look identical is not the aim, just don't rely on an HTML5 / CSS3 feature for an important feature of a page.</p>
+<p>CSS3 can be used, however with the majority of our users on ie6 still we should treat CSS3 features as visual rewards for capable browsers and things which save us lots of time, like gradients and border-radius.  Use all vendor prefixes in alphabetical order with the prefixless version <strong>last</strong>.</p>
+<pre><code>#slides img:hover {
+  <span class="b">-moz-transform</span>: scale(<span class="y">1.6</span>);
+  <span class="b">-ms-transform</span>: scale(<span class="y">1.6</span>);
+  <span class="b">-o-transform</span>: scale(<span class="y">1.6</span>);
+  <span class="b">-webkit-transform</span>: scale(<span class="y">1.6</span>);
+  <span class="b">transform</span>: scale(<span class="y">1.6</span>);
+}
+</code></pre>
+<p>HTML5 can be used, consider using shims to add support for more of our users and test the performance impact.</p>
+<p>Learn <a href="http://diveintohtml5.info/">http://diveintohtml5.info/</a> <a href="http://html5doctor.com/">http://html5doctor.com/</a></p>
+
+<h3>Maintain a support chart</h3>
+<p>Maintaining your own pages with test cases of standards being developed is the best way to keep up to date. It helps you to really learn how to use them, if you don't practice you quickly forget what you learnt.</p>
+
+<h3>Best practices:</h3>
+<ul>
+	<li>Feature detect
+	<li>Treat CSS3 as visual rewards for capable browsers
+	<li>Use shims for HTML5 features if they perform well enough
+</ul>
+
+<h2 id="access">Accessibility</h2>
+<h3>People</h3>
+<div class="frame media"><img width="140" height"120" alt="Big Freakin' Tick" src="big-tick.gif"></div>
+<p>Accessibility matters, it matters to those trying to use our software with a disability, it's in our contracts, it also directly relates to discrimination laws we need to know about, as well as simply being the right thing to do.</p>
+<p>Writing semantic HTML, CSS that's flexible with layout <span class="amp">&amp;</span> font-size as well as using Javascript to add keyboard support go a long way in making a web app as accessible as possible.</p>
+<p>It's not always difficult to make something accessible.  Always ask what you can do to improve a pages accessibility.</p>
+
+<h3>Visual impairments</h3>
+<p>Supporting blind users of screen reading software like JAWS / NVDA is the obvious case but there are others.  Use a sensibly sized default font and provide alt stylesheets for different font sizes. Use enough contrast between colours and foreground / background to enhance readability. </p>
+<p>Use a screen reader, it's the only way to gain a good insight into what using our software is really like for blind users.</p>
+
+<h4>Accessible tables <span class="amp">&amp;</span> forms</h4>
+<p>Keep tables simple and avoid nested headings. Using th elements for heading cells with appropriate scope is the first step for accessible tables.</p>
+<pre><code><span class="b">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th scope=<span class="y">"col"</span>&gt;</span>Name<span class="b">&lt;/th&gt;
+    &lt;th scope=<span class="y">"col"</span>&gt;</span>Age<span class="b">&lt;/th&gt;
+    &lt;th scope=<span class="y">"col"</span>&gt;</span>Birthday<span class="b">&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=<span class="y">"row"</span>&gt;</span>Jackie<span class="b">&lt;/th&gt;
+    &lt;td></span>5<span class="b">&lt;/td&gt;
+    &lt;td></span>April 5<span class="b">&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=<span class="y">"row"</span>&gt;</span>Beth<span class="b">&lt;/th&gt;
+    &lt;td></span>8<span class="b">&lt;/td&gt;
+    &lt;td></span>January 14<span class="b">&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</span>
+</code></pre>
+
+<p>Linking labels to inputs with the for attribute is the first step for accessible forms.</p>
+<pre><code><span class="b">&lt;label for=<span class="y">"email"</span>&gt;</span>Email<span class="b">&lt;/label&gt;
+&lt;input id=<span class="y">"email"</span>&gt;</span></pre></code>
+
+<p>Learn 
+	<a href="http://www.456bereastreet.com/archive/200410/bring_on_the_tables/">http://www.456bereastreet.com/archive/200410/bring_on_the_tables/</a><br>
+	<a href="http://www.webstandards.org/learn/tutorials/accessible-forms/">http://www.webstandards.org/learn/tutorials/accessible-forms/</a></p>
+
+<h3>Motor impairments</h3>
+<p>Most of us can appreciate using keyboard short cuts for navigating forms, people with low mobility will appreciate being able to use our software without a mouse far more than this.</p>
+
+<h3>UI consistency</h3>
+<p>This one is not as obvious as the other points, but is as valid.  A consistent UI will help all our users be able to access what they need to.  It's rare to find a web application of our size and complexity that doesn't have a style guide, let's make one.</p>
+
+<h3>WCAG <span class="amp">&amp;</span> WAI ARIA</h3>
+<p>We have focused on <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 1 Level A compliance in the past, <abbr title="Web Accessibility Initiative’s Accessible Rich Internet Applications">WAI ARIA</abbr> is a fairly recent addition and focuses on the moving parts of a web app.  The ARIA attributes can help explain dynamic changes to the page with javascript to users of assistive technologies.</p>
+<p><a href="http://dev.opera.com/articles/view/introduction-to-wai-aria/">http://dev.opera.com/articles/view/introduction-to-wai-aria/</a></p>
+
+<h3>Best practices:</h3>
+<ul>
+	<li>Test in JAWS or NVDA (on U:) - Add alt attributes, accessible forms <span class="amp">&amp;</span> tables
+	<li>Consider Ajax <span class="amp">&amp;</span> screen readers - How do you alert users to changed content?
+	<li>Add keyboard alternatives to all mouse events - mouseover -> focus, mouseout -> blur - Test without a mouse
+	<li>Assistive features - High contrast stylesheet, font-size stylesheets, access keys, skip links
+	<li>Avoid colour alone for critical information - e.g. Red = bad, Green = good
+	<li>Help everyone - Usable in different screen sizes, consistent navigation and user experience, friendly URLs, favicon etc.
+</ul>
+<p>People to follow
+	<a href="http://twitter.com/jkiss/">@jkiss</a>
+	<a href="http://twitter.com/stevefaulkner/">@stevefaulkner</a>
+	<a href="http://twitter.com/vick08/">@vick08</a>
+
+<h2 id="go">Go forth and multiply</h2>
+<p>Let's build something awesome and be home for dinner.</p>
+
+</body>
+</html>

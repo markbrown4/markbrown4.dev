@@ -1,0 +1,1085 @@
+@charset "UTF-8";
+/* line 17, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../.rvm/gems/ruby-1.9.3-p0@super_fun/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url("../fonts/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserrat-regular-webfont.svg#MontserratRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* mac hide \*/
+/* line 4, ../sass/layout.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* end hide */
+/* line 9, ../sass/layout.scss */
+body {
+  text-align: center;
+  min-height: 768px;
+  min-width: 1024px;
+}
+
+/* line 17, ../sass/layout.scss */
+#outer {
+  height: 100%;
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+}
+
+/* line 23, ../sass/layout.scss */
+#container {
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+  height: 768px;
+}
+
+/* line 30, ../sass/layout.scss */
+#inner {
+  width: 1022px;
+  height: 766px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* line 41, ../sass/layout.scss */
+.ie7 .ie8 #container {
+  top: 50%;
+}
+/* line 42, ../sass/layout.scss */
+.ie7 .ie8 #inner {
+  top: -50%;
+}
+
+/* line 45, ../sass/layout.scss */
+.ie7 #outer {
+  overflow: hidden;
+}
+
+/* line 8, ../sass/application.scss */
+body {
+  background: #333;
+  /* loading */
+  color: #666768;
+}
+
+/* line 12, ../sass/application.scss */
+a {
+  color: #9cc5c9;
+  text-decoration: none;
+}
+
+/* line 16, ../sass/application.scss */
+small {
+  font-size: 13px;
+}
+
+/* line 17, ../sass/application.scss */
+p {
+  line-height: 1.5;
+}
+
+/* line 18, ../sass/application.scss */
+h1, h2, h3 {
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  letter-spacing: 1.5px;
+}
+
+/* line 23, ../sass/application.scss */
+p {
+  margin: 0 0 1em;
+}
+
+/* line 24, ../sass/application.scss */
+h2 {
+  font-size: 20px;
+  color: #cf3143;
+  line-height: 5px;
+}
+
+/* line 29, ../sass/application.scss */
+h2:before {
+  content: '—';
+  margin-right: 5px;
+  font-size: 35px;
+}
+
+/* line 34, ../sass/application.scss */
+h2:after {
+  content: '—';
+  margin-left: 10px;
+  font-size: 35px;
+}
+
+/* line 39, ../sass/application.scss */
+em {
+  color: #9cc5c9;
+  font-size: 120%;
+}
+
+/* line 40, ../sass/application.scss */
+h3 {
+  color: #9cc5c9;
+}
+
+/* line 41, ../sass/application.scss */
+.btn {
+  background: #cf3143 url(../img/button-texture.png);
+  display: block;
+  width: 285px;
+  padding: 12px 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* line 56, ../sass/application.scss */
+body {
+  font-family: 'MontserratRegular', sans-serif;
+  background: url(../img/texture.jpg);
+}
+
+/* line 60, ../sass/application.scss */
+#inner {
+  background: transparent url(../img/board.jpg) repeat -1px -1px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/* line 64, ../sass/application.scss */
+hr {
+  display: block;
+  width: 100px;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  border-top: 3px solid #9cc5c9;
+  margin: 10px auto;
+}
+
+/* board z-index 1 */
+/* line 74, ../sass/application.scss */
+#age {
+  position: absolute;
+  bottom: 130px;
+  font-size: 80px;
+  left: 49px;
+  width: 193px;
+  color: #cf3143;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+/* line 83, ../sass/application.scss */
+#balance {
+  position: absolute;
+  bottom: 54px;
+  font-size: 35px;
+  left: 49px;
+  width: 193px;
+  color: #fff;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* z-index 2 */
+/* line 94, ../sass/application.scss */
+#overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -moz-transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+/* line 102, ../sass/application.scss */
+#overlay.active {
+  opacity: 1;
+}
+
+/* line 107, ../sass/application.scss */
+#paper, #canvas, #ie-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 112, ../sass/application.scss */
+#canvas, #ie-canvas {
+  z-index: 2;
+}
+
+/* cards z-index 3 */
+/* line 117, ../sass/application.scss */
+#spinner, .card, #questions > div, #incorrect, #correct, #final {
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  position: absolute;
+  z-index: 3;
+  top: -700px;
+  opacity: 0;
+  left: 140px;
+  width: 680px;
+  background: white url(../img/texture.jpg);
+  padding: 50px 31px 15px;
+  min-height: 490px;
+}
+/* line 128, ../sass/application.scss */
+#spinner.active, .card.active, #questions > div.active, #incorrect.active, #correct.active, #final.active {
+  top: 115px;
+  opacity: 1;
+}
+/* line 132, ../sass/application.scss */
+#spinner:before, .card:before, #questions > div:before, #incorrect:before, #correct:before, #final:before {
+  content: '';
+  height: 11px;
+  position: absolute;
+  top: -11px;
+  left: 0;
+  right: 0;
+  background: url(../img/ribbon-top.png);
+}
+/* line 141, ../sass/application.scss */
+#spinner:after, .card:after, #questions > div:after, #incorrect:after, #correct:after, #final:after {
+  content: '';
+  height: 11px;
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  right: 0;
+  background: url(../img/ribbon-bottom.png);
+}
+
+/* line 151, ../sass/application.scss */
+#spinner {
+  width: 300px;
+  min-height: 343px;
+  left: 340px;
+  padding: 15px 19px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+/* line 157, ../sass/application.scss */
+#spinner.active {
+  top: 190px;
+}
+/* line 161, ../sass/application.scss */
+#spinner.show-number #number {
+  opacity: 0;
+  font-size: 200px;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+/* line 167, ../sass/application.scss */
+#spinner #number {
+  -moz-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  opacity: 1;
+  color: #fff;
+  font-size: 0px;
+  left: 0;
+  line-height: 100px;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 56px;
+  z-index: 5;
+}
+/* line 180, ../sass/application.scss */
+#spinner .wheel {
+  background: url(../img/spinner-bg.png);
+  height: 290px;
+  width: 275px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 187, ../sass/application.scss */
+#spinner .marker {
+  background: url(../img/spin-marker.png);
+  height: 157px;
+  width: 140px;
+  position: absolute;
+  top: 18px;
+  left: 69px;
+}
+/* line 195, ../sass/application.scss */
+#spinner #wheel {
+  background: url(../img/spinner.png);
+  height: 230px;
+  width: 230px;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  -moz-transition: all 1.5s ease-out;
+  -webkit-transition: all 1.5s ease-out;
+  -o-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-1 {
+  -moz-transform: rotate(1140deg);
+  -webkit-transform: rotate(1140deg);
+  -o-transform: rotate(1140deg);
+  -ms-transform: rotate(1140deg);
+  transform: rotate(1140deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-1 {
+  -moz-transform: rotate(-1140deg);
+  -webkit-transform: rotate(-1140deg);
+  -o-transform: rotate(-1140deg);
+  -ms-transform: rotate(-1140deg);
+  transform: rotate(-1140deg);
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-2 {
+  -moz-transform: rotate(1200deg);
+  -webkit-transform: rotate(1200deg);
+  -o-transform: rotate(1200deg);
+  -ms-transform: rotate(1200deg);
+  transform: rotate(1200deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-2 {
+  -moz-transform: rotate(-1200deg);
+  -webkit-transform: rotate(-1200deg);
+  -o-transform: rotate(-1200deg);
+  -ms-transform: rotate(-1200deg);
+  transform: rotate(-1200deg);
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-3 {
+  -moz-transform: rotate(1260deg);
+  -webkit-transform: rotate(1260deg);
+  -o-transform: rotate(1260deg);
+  -ms-transform: rotate(1260deg);
+  transform: rotate(1260deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-3 {
+  -moz-transform: rotate(-1260deg);
+  -webkit-transform: rotate(-1260deg);
+  -o-transform: rotate(-1260deg);
+  -ms-transform: rotate(-1260deg);
+  transform: rotate(-1260deg);
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-4 {
+  -moz-transform: rotate(1320deg);
+  -webkit-transform: rotate(1320deg);
+  -o-transform: rotate(1320deg);
+  -ms-transform: rotate(1320deg);
+  transform: rotate(1320deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-4 {
+  -moz-transform: rotate(-1320deg);
+  -webkit-transform: rotate(-1320deg);
+  -o-transform: rotate(-1320deg);
+  -ms-transform: rotate(-1320deg);
+  transform: rotate(-1320deg);
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-5 {
+  -moz-transform: rotate(1380deg);
+  -webkit-transform: rotate(1380deg);
+  -o-transform: rotate(1380deg);
+  -ms-transform: rotate(1380deg);
+  transform: rotate(1380deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-5 {
+  -moz-transform: rotate(-1380deg);
+  -webkit-transform: rotate(-1380deg);
+  -o-transform: rotate(-1380deg);
+  -ms-transform: rotate(-1380deg);
+  transform: rotate(-1380deg);
+}
+/* line 205, ../sass/application.scss */
+#spinner #wheel.spin-6 {
+  -moz-transform: rotate(1440deg);
+  -webkit-transform: rotate(1440deg);
+  -o-transform: rotate(1440deg);
+  -ms-transform: rotate(1440deg);
+  transform: rotate(1440deg);
+}
+/* line 208, ../sass/application.scss */
+#spinner #wheel.reverse.spin-6 {
+  -moz-transform: rotate(-1440deg);
+  -webkit-transform: rotate(-1440deg);
+  -o-transform: rotate(-1440deg);
+  -ms-transform: rotate(-1440deg);
+  transform: rotate(-1440deg);
+}
+
+/* line 215, ../sass/application.scss */
+#intro, #form {
+  -moz-transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  height: 768px;
+  width: 1024px;
+  background: white url(../img/texture.jpg);
+  margin: -1px;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  top: -800px;
+  opacity: 0;
+}
+/* line 226, ../sass/application.scss */
+#intro.active, #form.active {
+  top: 0;
+  opacity: 1;
+}
+/* line 230, ../sass/application.scss */
+#intro .title, #form .title {
+  margin-top: 150px;
+}
+/* line 231, ../sass/application.scss */
+#intro .loading, #form .loading {
+  background: transparent url(../img/loading-spinner-bg.png) no-repeat 491px 3px;
+}
+/* line 233, ../sass/application.scss */
+#intro .loading #loading-spinner, #form .loading #loading-spinner {
+  display: block;
+  width: 48px;
+  height: 47px;
+  margin: 56px auto 12px;
+  -moz-transition: all 5s linear;
+  -webkit-transition: all 5s linear;
+  -o-transition: all 5s linear;
+  transition: all 5s linear;
+}
+/* line 239, ../sass/application.scss */
+#intro .loading #loading-spinner.spin, #form .loading #loading-spinner.spin {
+  -moz-transform: rotate(1800deg);
+  -webkit-transform: rotate(1800deg);
+  -o-transform: rotate(1800deg);
+  -ms-transform: rotate(1800deg);
+  transform: rotate(1800deg);
+}
+/* line 245, ../sass/application.scss */
+#intro .footer .logo, #form .footer .logo {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+/* line 250, ../sass/application.scss */
+#intro .footer p, #form .footer p {
+  color: #aaa;
+  font-size: 11px;
+  bottom: 35px;
+  left: 220px;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  width: 750px;
+}
+/* line 260, ../sass/application.scss */
+#intro .footer a, #form .footer a {
+  color: #cf3143;
+}
+
+/* line 264, ../sass/application.scss */
+#choose {
+  z-index: 4;
+}
+/* line 266, ../sass/application.scss */
+#choose .answers {
+  list-style: none;
+}
+/* line 268, ../sass/application.scss */
+#choose .answers h3 {
+  margin-left: 130px;
+  margin-bottom: 7px;
+}
+/* line 272, ../sass/application.scss */
+#choose .answers p {
+  margin: 0 0 0 130px;
+}
+/* line 275, ../sass/application.scss */
+#choose .answers img {
+  float: left;
+  position: relative;
+  bottom: -5px;
+}
+/* line 280, ../sass/application.scss */
+#choose .answers #sitter img {
+  bottom: -10px;
+}
+
+/* line 284, ../sass/application.scss */
+#instructions img {
+  margin: 15px 0 20px;
+}
+/* line 285, ../sass/application.scss */
+#instructions small {
+  font-size: 14px;
+  display: block;
+  margin: 20px 35px;
+}
+
+/* line 293, ../sass/application.scss */
+#questions > div {
+  padding-top: 20px;
+  min-height: 510px;
+}
+/* line 297, ../sass/application.scss */
+#questions .answers a {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cf3143;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 30px;
+}
+/* line 304, ../sass/application.scss */
+#questions .answers a:active, #questions .answers a:focus {
+  border-color: #cf3143;
+  background: #cf3143;
+  color: #fff;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+/* line 312, ../sass/application.scss */
+#questions p {
+  margin-bottom: 20px;
+}
+
+/* line 316, ../sass/application.scss */
+#questions h2 span,
+#correct h2 span,
+#incorrect h2 span {
+  display: inline-block;
+  height: 58px;
+  line-height: 58px;
+  width: 58px;
+  background: #cf3143;
+  color: #fff;
+  border-radius: 58px;
+  font-size: 35px;
+  text-align: center;
+  text-indent: 3px;
+}
+
+/* line 328, ../sass/application.scss */
+#correct, #incorrect {
+  padding-top: 20px;
+  min-height: 510px;
+}
+/* line 331, ../sass/application.scss */
+#correct .icon, #incorrect .icon {
+  position: absolute;
+  left: 341px;
+  top: 110px;
+  margin: 0;
+}
+/* line 337, ../sass/application.scss */
+#correct .msg, #incorrect .msg {
+  margin-top: 90px;
+  color: #b2bb1e;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+/* line 344, ../sass/application.scss */
+#correct .reward-area, #incorrect .reward-area {
+  position: relative;
+  height: 100px;
+}
+/* line 347, ../sass/application.scss */
+#correct .reward-area small, #incorrect .reward-area small {
+  display: block;
+  margin-bottom: 70px;
+}
+/* line 352, ../sass/application.scss */
+#correct .reward, #incorrect .reward {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  font-size: 55px;
+  color: #b2bb1e;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+/* line 361, ../sass/application.scss */
+#correct .tip small, #incorrect .tip small {
+  font-size: 15px;
+  line-height: 18px;
+}
+/* line 365, ../sass/application.scss */
+#correct hr, #incorrect hr {
+  border-color: #b2bb1e;
+}
+
+/* line 368, ../sass/application.scss */
+#incorrect .msg {
+  color: #cf3143;
+}
+/* line 371, ../sass/application.scss */
+#incorrect hr {
+  border-color: #cf3143;
+}
+
+/* line 373, ../sass/application.scss */
+.answers {
+  text-align: left;
+}
+/* line 375, ../sass/application.scss */
+.answers p {
+  font-size: 13px;
+}
+/* line 376, ../sass/application.scss */
+.answers a {
+  color: #666768;
+  display: block;
+  padding: 20px 30px;
+  background: #eee;
+  background: rgba(0, 0, 0, 0.04);
+  border: 4px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+/* line 385, ../sass/application.scss */
+.answers a:hover {
+  background: #e8e8e8;
+  background: rgba(0, 0, 0, 0.08);
+}
+/* line 389, ../sass/application.scss */
+.answers a:active, .answers a:focus {
+  border-color: #cf3143;
+  outline: none;
+}
+/* line 394, ../sass/application.scss */
+.answers h3 {
+  color: #9cc5c9;
+}
+
+/* line 398, ../sass/application.scss */
+#final .btn {
+  float: left;
+  margin-right: 10px;
+}
+/* line 402, ../sass/application.scss */
+#final #finished {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 140px;
+  text-align: right;
+}
+/* line 409, ../sass/application.scss */
+#final #score {
+  width: 382px;
+  height: 76px;
+  margin: 30px auto 25px;
+  line-height: 76px;
+  color: #fff;
+  text-align: center;
+  font-size: 55px;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  background: url(../img/final-ribbon.png);
+}
+/* line 420, ../sass/application.scss */
+#final h3 {
+  font-size: 25px;
+  margin: 0 0 5px;
+}
+/* line 424, ../sass/application.scss */
+#final #story {
+  color: #c8c8c8;
+  font-style: italic;
+  padding: 0 20px;
+}
+/* line 429, ../sass/application.scss */
+#final hr {
+  border-top: 2px dashed #9cc5c9;
+  width: 100%;
+}
+/* line 433, ../sass/application.scss */
+#final #learn {
+  margin: 20px 0;
+  overflow: hidden;
+}
+/* line 436, ../sass/application.scss */
+#final #learn p {
+  float: left;
+  width: 275px;
+  text-align: right;
+  padding: 20px 25px 0 0;
+}
+/* line 442, ../sass/application.scss */
+#final #learn ul {
+  float: left;
+  width: 320px;
+  height: 90px;
+  background: url(../img/handlebars.png) no-repeat 0 0;
+  padding: 5px 0 0 55px;
+}
+/* line 448, ../sass/application.scss */
+#final #learn ul li {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 7px;
+}
+/* line 453, ../sass/application.scss */
+#final #learn ul a {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-size: 14px;
+  float: left;
+  height: 23px;
+  line-height: 22px;
+  padding: 0 15px 0 5px;
+  background: url(../img/ribbon-green.png) no-repeat 100% 0;
+}
+/* line 464, ../sass/application.scss */
+#final #learn ul #l-2 a {
+  background-image: url(../img/ribbon-grey.png);
+}
+/* line 467, ../sass/application.scss */
+#final #learn ul #l-3 a {
+  background-image: url(../img/ribbon-yellow.png);
+}
+/* line 472, ../sass/application.scss */
+#final #reset {
+  width: 220px;
+  margin-left: 25px;
+}
+/* line 476, ../sass/application.scss */
+#final #more-advice {
+  width: 400px;
+}
+
+/* line 480, ../sass/application.scss */
+#form #thanks {
+  display: none;
+  position: absolute;
+  top: 225px;
+  left: 0;
+  right: 0;
+}
+/* line 486, ../sass/application.scss */
+#form #thanks .logo {
+  margin: 0;
+}
+/* line 489, ../sass/application.scss */
+#form #thanks p {
+  margin: 40px 0;
+  color: #A2978A;
+}
+/* line 494, ../sass/application.scss */
+#form #plan {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  width: 200px;
+  text-align: center;
+}
+/* line 501, ../sass/application.scss */
+#form label {
+  display: block;
+  overflow: hidden;
+  color: #a2978a;
+  margin-bottom: 9px;
+  line-height: 27px;
+  padding-left: 38px;
+  cursor: pointer;
+}
+/* line 510, ../sass/application.scss */
+#form .label {
+  color: #666768;
+  padding: 0;
+  cursor: normal;
+}
+/* line 515, ../sass/application.scss */
+#form .check {
+  display: none;
+}
+/* line 516, ../sass/application.scss */
+#form .fake-check {
+  float: left;
+  margin-left: -38px;
+  height: 27px;
+  width: 27px;
+  background: url(../img/check.png) no-repeat 0 0;
+}
+/* line 523, ../sass/application.scss */
+#form .active {
+  color: #cf3143;
+}
+/* line 525, ../sass/application.scss */
+#form .active .fake-check {
+  background-position: 0 -27px;
+}
+/* line 529, ../sass/application.scss */
+#form .text, #form textarea, #form #fake-select {
+  border: none;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #ccc;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  background: url(../img/form-texture.png) repeat;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 7px 10px;
+  margin-bottom: 9px;
+  color: #666768;
+  font-size: 15px;
+  font-family: 'MontserratRegular', sans-serif;
+}
+/* line 543, ../sass/application.scss */
+#form ::-webkit-input-placeholder {
+  color: #666768;
+}
+/* line 544, ../sass/application.scss */
+#form :-moz-placeholder {
+  color: #666768;
+}
+/* line 545, ../sass/application.scss */
+#form #fake-select {
+  padding: 0;
+  width: 169px;
+  position: relative;
+}
+/* line 549, ../sass/application.scss */
+#form #fake-select .trigger {
+  display: block;
+  color: #666768;
+  width: 150px;
+  padding: 9px 10px 10px;
+  background: url(../img/toggle-arrow.png) no-repeat 100% 4px;
+}
+/* line 556, ../sass/application.scss */
+#form #fake-select ul {
+  background: url(../img/form-texture.png) repeat;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #ccc;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  left: -1px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: none;
+  padding: 3px 0;
+}
+/* line 568, ../sass/application.scss */
+#form #fake-select ul a {
+  display: block;
+  padding: 5px 10px;
+  color: #666768;
+}
+/* line 572, ../sass/application.scss */
+#form #fake-select ul a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+/* line 577, ../sass/application.scss */
+#form #fake-select.active ul {
+  display: block;
+}
+/* line 579, ../sass/application.scss */
+#form .text {
+  width: 269px;
+}
+/* line 580, ../sass/application.scss */
+#form textarea {
+  width: 618px;
+}
+/* line 581, ../sass/application.scss */
+#form .postcode {
+  width: 90px;
+  float: right;
+}
+/* line 582, ../sass/application.scss */
+#form .btn {
+  display: inline-block;
+  margin-right: 10px;
+  border: none;
+  width: 225px;
+  text-align: center;
+}
+/* line 589, ../sass/application.scss */
+#form form {
+  width: 640px;
+  float: right;
+  margin: 65px;
+  text-align: left;
+}
+/* line 595, ../sass/application.scss */
+#form .select-all {
+  float: left;
+  width: 350px;
+}
+/* line 599, ../sass/application.scss */
+#form .personal {
+  float: left;
+  width: 290px;
+}
+/* line 603, ../sass/application.scss */
+#form hr {
+  border-top: 2px dashed #cf3143;
+  width: 100%;
+  margin: 20px 0;
+}
+/* line 608, ../sass/application.scss */
+#form #content {
+  position: relative;
+  -moz-transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  opacity: 1;
+  z-index: 2;
+}
+/* line 614, ../sass/application.scss */
+#form #msg {
+  background: #f6c1a9;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  border-radius: 10px 10px 10px 10px;
+  left: 20px;
+  padding: 30px;
+  position: absolute;
+  right: 20px;
+  top: 640px;
+  opacity: 0;
+}
+
+/* line 626, ../sass/application.scss */
+#content .logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* line 631, ../sass/application.scss */
+.verisign {
+  position: absolute;
+  top: 620px;
+  left: 100px;
+}
+
+/* line 637, ../sass/application.scss */
+#form.nope #msg {
+  opacity: 1;
+  z-index: 5;
+}
+/* line 641, ../sass/application.scss */
+#form.nope #content {
+  opacity: .2;
+}
+
+/* line 646, ../sass/application.scss */
+#form.yep #thanks {
+  display: block;
+}
+/* line 647, ../sass/application.scss */
+#form.yep #content {
+  display: none;
+}
+
+/* line 650, ../sass/application.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 654, ../sass/application.scss */
+.no-transition {
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* line 658, ../sass/application.scss */
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
