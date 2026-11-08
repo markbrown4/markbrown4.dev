@@ -23,7 +23,7 @@ npm run preview  # serves dist/
 | Path | What |
 | --- | --- |
 | `src/content/journal/*.md` | Journal posts. The filename is the URL slug, and `<!-- more -->` splits the intro from the rest. |
-| `src/pages/` | About (`index`), Journal, Sharing, CV, plus Philosophy and Travel, which aren't linked from the nav. |
+| `src/pages/` | About (`index`), Journal, CV, plus Philosophy and Travel, which aren't linked from the nav. |
 | `src/data/cv.md` | CV body. `{{years}}` is replaced at build time. |
 | `src/data/places.json` | Pins for the travel map. |
 | `src/styles/global.css` | All styles, with light and dark themes. |

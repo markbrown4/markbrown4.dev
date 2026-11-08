@@ -18,7 +18,6 @@ const path = Astro.url.pathname;
 const nav = [
   { href: '/', label: 'About', active: path === '/' },
   { href: '/journal/', label: 'Journal', active: path.startsWith('/journal') },
-  { href: '/sharing/', label: 'Sharing', active: path.startsWith('/sharing') },
   { href: '/cv/', label: 'CV', active: path.startsWith('/cv') },
 ];
 ---
@@ -70,5 +69,8 @@ const nav = [
       <a href="https://github.com/markbrown4">GitHub</a>
       <a href="/journal/feed.xml">Feed</a>
     </footer>
+    <script>
+      if (document.querySelector('.carousel')) import('../scripts/carousel');
+    </script>
   </body>
 </html>
