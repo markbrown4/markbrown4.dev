@@ -69,12 +69,12 @@ I picked the two worst recent decades to prove a point that high inflation is sc
 Buying assets that appreciate in value like property or generate an income like shares in a business greater than the rate of inflation is key to becoming and staying wealthy over time.
 
 <div class="frame">
-  <a href="/images/journal/money/vanguard-index-chart-2026.pdf">
+  <a href="https://fund-docs.vanguard.com/AU-Vanguard_Index_Chart_poster.pdf">
     <img src="/images/journal/money/vanguard.png" alt="">
   </a>
 </div>
 
-The [Vanguard Index Chart](/images/journal/money/vanguard-index-chart-2026.pdf) shows the growth of $10,000 over 30 years with no acquisition costs or taxes and _all income reinvested_ into different asset classes.
+The [Vanguard Index Chart]([/images/journal/money/vanguard-index-chart-2026.pdf](https://fund-docs.vanguard.com/AU-Vanguard_Index_Chart_poster.pdf)) shows the growth of $10,000 over 30 years with no acquisition costs or taxes and _all income reinvested_ into different asset classes.
 
 There's short term fluctuations and a few crashes. It's still clear to me when looking at these with the perspective of time that Shares, Property and Bonds have all grown faster than inflation shown as the red line at the bottom for CPI.
 
