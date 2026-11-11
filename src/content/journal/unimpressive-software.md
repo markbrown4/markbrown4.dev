@@ -4,9 +4,12 @@ tags: ["AI"]
 date: 2026-10-29
 ---
 
-I built an app called [Rituals](https://rituals.markbrown4.dev/), for iOS and Android.
-It won't win any awards, but to me it's the bees knees.
+I built an app recently called [Rituals](https://rituals.markbrown4.dev/), for iOS and Android.
+It won't win any awards, but it's the bees knees.
 It's a simple idea aimed at helping me remember and measure the things I want to do be doing weekly.
+I built it for myself, but it's free and open for anyone to use.
+
+Here are the main screens.
 
 <div class="carousel" role="region" aria-label="Rituals iOS screenshots" tabindex="0">
   <img src="/images/journal/unimpressive-software/1-board.webp" alt="The Board, showing this week's rituals: steps, walking Milly, push-ups, sleep and quality time" width="600" height="1301" loading="lazy">
@@ -19,7 +22,7 @@ It's a simple idea aimed at helping me remember and measure the things I want to
   <img src="/images/journal/unimpressive-software/6-widgets.webp" alt="Rituals widgets on the iPhone Home Screen" width="600" height="1305" loading="lazy">
 </div>
 
-Three years ago, if someone had shown me this I would have been impressed. Now however, this is all deeply _unimpressive_ software. Anyone with a Claude Code subscription and an idea can do the same.  Indeed, the bulk of this was built in two weeks, a few hours each night, doing just that.  Then a few more weeks of refinement.
+Three years ago, if someone had shown me this I would have been impressed. Today, this is all deeply _unimpressive_ software. Anyone with a Claude Code subscription and an idea can do the same.  Indeed, the bulk of this was built in two weeks, a few hours each night, doing just that.
 
 <!-- more -->
 
@@ -48,7 +51,7 @@ And the app itself has a real feature set:
 - Insights over the last 6 months
 - Home-screen widgets
 - Dark mode
-- Push notifications and deep links
+- Push notifications for reminders, challenges and weekly recaps
 
 ## Fast, cheap, and good
 
@@ -57,9 +60,7 @@ The old rule was that you could pick two: fast, cheap, or good. Rituals was fast
 Now, this is a dangerous and even _offensive_ idea, that AI can produce high quality software without expertise.  But it's what I've found to be true by looking at the output, and comparing it against a comparable app that I built with a small team in the past.  What once took a team months is now a side project for one person after dinner.
 
 Software is unimpressive because it's no longer rare, there will be an abundance of fast, cheap and _good_ software.
-Don't get me wrong, there will also be an abundance of _bad_ software.  That won't come from AIs producing slop, it'll come from the builders not knowing what to build.
-
-Skilled designers and engineers obviously have an edge on the unskilled in knowing what to build.
+Don't get me wrong, there will also be an abundance of _bad_ software.  That won't come from AIs producing slop, it'll come from the builders not knowing what to build.  Skilled designers and engineers will have an edge on the unskilled in knowing what to build.
 
 ## How good sofware is built
 
