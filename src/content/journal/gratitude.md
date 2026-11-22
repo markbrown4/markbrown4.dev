@@ -10,15 +10,12 @@ Our family is healthy and safe.  We have good stable jobs with great maternity l
 Some recent setbacks aside, we've had a very good year and I choose today to focus on that.
 
 <!-- more -->
-<q><span style="text-align:left">
-Think of how stupid the average person is, and realize half of them are stupider than that.<br />
-― George Carlin</span></q>
 
 ## Cars are a massive inconvenience
 
-As of yesterday we are down to zero cars in our household because someone drove up the back of our <i>stationary</i> car.  The driver got aggressive and argued that I must have snuck up behind <i>him</i>. Idiot Number One.
+As of yesterday we are down to zero cars in our household because someone drove up the back of our <i>stationary</i> car.  The driver got aggressive and argued that I must have snuck up behind <i>him</i>.
 
-Someone else accidentally drove into the same car when it was parked a week earlier.  This driver was honest enough to leave his details and a note and he's lucky that the minor damage he caused has now been <i>properly</i> smashed in by Idiot Number One.
+Someone else accidentally drove into the same car when it was parked a week earlier.  This driver was honest enough to leave his details and a note and he's lucky that the minor damage he caused has now been <i>properly</i> smashed in.
 
 Our only other car has had multiple costly breakdowns over the last year.  Even though it had only clocked 100k on the odometer the timing chain snapped destroying the engine beyond repair.  The second engine has had multiple faulty fuel injectors and a leaking Exhaust Gas Recirculation Cooling unit.
 Our fingers are crossed that a new fuel injector will be the last thing required to get it running smoothly.
@@ -33,7 +30,7 @@ Our smashed car is unlikely to be repaired by the insurer so we'll be paid out t
 
 Childbirth was a wonderful experience for us.  No complications or health issues for mum and bub, a massive win.  The first week was the best week of my life and the cake trolley was off the charts.  The cheeky lad is a lot of fun, <i>most</i> of the time.  I like his little face.
 
-We were able to travel with the family from Darwin to Cairns in a Maui campervan.  Julian loved the warm water springs, rainforests and waterfalls, it was a great time to bond and explore some of our beautiful country together.  We also got to Hamilton Island in QLD.  I really appreciated that there were no cars allowed on the island, everyone gets around in golf buggies so the pollution and damage people can cause is limited.  That didn't stop Idiot Number Two flipping theirs upside down near our unit.
+We were able to travel with the family from Darwin to Cairns in a Maui campervan.  Julian loved the warm water springs, rainforests and waterfalls, it was a great time to bond and explore some of our beautiful country together.  We also got to Hamilton Island in QLD.  I really appreciated that there were no cars allowed on the island, everyone gets around in golf buggies so the pollution and damage people can cause is limited.  That didn't stop someone flipping theirs upside down near our unit.
 
 ## Financial independence
 

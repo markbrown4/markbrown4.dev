@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "site",
+      "name": "dev",
       "runtimeExecutable": "/Users/mark/.local/bin/mise",
-      "runtimeArgs": ["exec", "--", "npx", "astro", "preview", "--port", "4321"],
+      "runtimeArgs": ["exec", "--", "npx", "astro", "dev", "--port", "4321"],
       "port": 4321
     }
   ]
