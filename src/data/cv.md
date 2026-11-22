@@ -77,7 +77,7 @@ High level of competency and experience in:
   <tr>
     <td width="90">2018 - now</td>
     <td>
-      <h3>Senior Software Engineer <span class="sub">with</span> Ferocia</h3>
+      <h3>Software Engineer <span class="sub">with</span> Ferocia</h3>
       <p>
         Up is a React Native app, with a GraphQL and Rails back-end.
         I've enjoyed working across the stack, leading development of features like International Payments, Pay Splitting and BPAY payments.
