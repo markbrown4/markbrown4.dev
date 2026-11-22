@@ -33,14 +33,17 @@ function enhance(carousel: HTMLElement) {
   let active = -1;
   function update() {
     const middle = carousel.scrollLeft + carousel.clientWidth / 2;
+    // Read every position first, then write, so a frame lays out only once.
+    const distances = slides.map((slide) => Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - middle));
     let nearest = 0;
-    let best = Infinity;
+    distances.forEach((distance, i) => {
+      if (distance < distances[nearest]) nearest = i;
+    });
+    // --focus runs from 1 in the middle to 0 a whole slide away, so each
+    // screenshot grows and brightens in step with the scroll, not after it.
     slides.forEach((slide, i) => {
-      const distance = Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - middle);
-      if (distance < best) {
-        best = distance;
-        nearest = i;
-      }
+      const focus = Math.max(0, 1 - distances[i] / slide.offsetWidth);
+      slide.style.setProperty('--focus', focus.toFixed(3));
     });
     if (nearest === active) return;
     active = nearest;

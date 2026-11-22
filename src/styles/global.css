@@ -338,18 +338,18 @@ time {
 .carousel.is-enhanced::-webkit-scrollbar {
   display: none;
 }
+/* --focus (0 to 1, set by the script from the scroll position) drives the
+   scale and fade, so they track the swipe directly. No transition: easing on
+   top of the scroll would make them lag behind it. */
 .carousel.is-enhanced img {
+  --focus: 0;
   scroll-snap-stop: always;
-  transform: scale(0.94);
-  opacity: 0.45;
+  transform: scale(calc(0.94 + 0.06 * var(--focus)));
+  opacity: calc(0.45 + 0.55 * var(--focus));
   cursor: pointer;
-  transition:
-    transform 0.35s cubic-bezier(0.25, 0.8, 0.3, 1),
-    opacity 0.35s ease;
+  will-change: transform, opacity;
 }
 .carousel.is-enhanced img.is-active {
-  transform: none;
-  opacity: 1;
   cursor: default;
 }
 
@@ -387,7 +387,6 @@ time {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel.is-enhanced img,
   .carousel-dots button {
     transition: none;
   }
