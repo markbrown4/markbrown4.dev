@@ -80,7 +80,7 @@ High level of competency and experience in:
       <h3>Software Engineer <span class="sub">with</span> Ferocia</h3>
       <p>
         Up is a React Native app, with a GraphQL and Rails back-end.
-        I've enjoyed working across the stack, leading development of features like International Payments, Pay Splitting and BPAY payments.
+        I've enjoyed working across the stack, leading development of features like International Payments, Pay Splitting, BPAY and 2Up.
       </p>
       <p>I'm proud of the work I've done to improve accessibility of the app for non sighted customers as well.</p>
       <p>Tooling: Ruby on Rails, React Native</p>
